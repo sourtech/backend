@@ -1,0 +1,875 @@
+[
+  {
+    "title": "Manzana actualizada",
+    "description": "producto uno actualizado",
+    "price": 10,
+    "thumbnail": "img/10_update.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Pera",
+    "description": "producto dos",
+    "price": 15,
+    "thumbnail": "img/15.jpg",
+    "code": "abc122",
+    "stock": 3,
+    "id": 2
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana actualizada",
+    "description": "producto uno actualizado",
+    "price": 10,
+    "thumbnail": "img/10_update.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana actualizada",
+    "description": "producto uno actualizado",
+    "price": 10,
+    "thumbnail": "img/10_update.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana actualizada",
+    "description": "producto uno actualizado",
+    "price": 10,
+    "thumbnail": "img/10_update.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana actualizada",
+    "description": "producto uno actualizado",
+    "price": 10,
+    "thumbnail": "img/10_update.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana actualizada",
+    "description": "producto uno actualizado",
+    "price": 10,
+    "thumbnail": "img/10_update.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana actualizada",
+    "description": "producto uno actualizado",
+    "price": 10,
+    "thumbnail": "img/10_update.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana actualizada",
+    "description": "producto uno actualizado",
+    "price": 10,
+    "thumbnail": "img/10_update.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana actualizada",
+    "description": "producto uno actualizado",
+    "price": 10,
+    "thumbnail": "img/10_update.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana actualizada",
+    "description": "producto uno actualizado",
+    "price": 10,
+    "thumbnail": "img/10_update.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana actualizada",
+    "description": "producto uno actualizado",
+    "price": 10,
+    "thumbnail": "img/10_update.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana actualizada",
+    "description": "producto uno actualizado",
+    "price": 10,
+    "thumbnail": "img/10_update.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana actualizada",
+    "description": "producto uno actualizado",
+    "price": 10,
+    "thumbnail": "img/10_update.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana actualizada",
+    "description": "producto uno actualizado",
+    "price": 10,
+    "thumbnail": "img/10_update.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana actualizada",
+    "description": "producto uno actualizado",
+    "price": 10,
+    "thumbnail": "img/10_update.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana actualizada",
+    "description": "producto uno actualizado",
+    "price": 10,
+    "thumbnail": "img/10_update.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana actualizada",
+    "description": "producto uno actualizado",
+    "price": 10,
+    "thumbnail": "img/10_update.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana2",
+    "description": "producto uno",
+    "price": 10,
+    "thumbnail": "img/10.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana2",
+    "description": "producto uno",
+    "price": 10,
+    "thumbnail": "img/10.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana2",
+    "description": "producto uno",
+    "price": 10,
+    "thumbnail": "img/10.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana2",
+    "description": "producto uno",
+    "price": 10,
+    "thumbnail": "img/10.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana2",
+    "description": "producto uno",
+    "price": 10,
+    "thumbnail": "img/10.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana2",
+    "description": "producto uno",
+    "price": 10,
+    "thumbnail": "img/10.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana2",
+    "description": "producto uno",
+    "price": 10,
+    "thumbnail": "img/10.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana actualizada",
+    "description": "producto uno actualizado",
+    "price": 10,
+    "thumbnail": "img/10_update.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana2",
+    "description": "producto uno",
+    "price": 10,
+    "thumbnail": "img/10.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana2",
+    "description": "producto uno",
+    "price": 10,
+    "thumbnail": "img/10.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana2",
+    "description": "producto uno",
+    "price": 10,
+    "thumbnail": "img/10.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana2",
+    "description": "producto uno",
+    "price": 10,
+    "thumbnail": "img/10.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana2",
+    "description": "producto uno",
+    "price": 10,
+    "thumbnail": "img/10.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana2",
+    "description": "producto uno",
+    "price": 10,
+    "thumbnail": "img/10.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  },
+  {
+    "title": "Manzana2",
+    "description": "producto uno",
+    "price": 10,
+    "thumbnail": "img/10.jpg",
+    "code": "abc123",
+    "stock": 2,
+    "id": 1
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc121",
+    "stock": 4,
+    "id": 3
+  },
+  {
+    "title": "Tomate 2",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnail": "img/20.jpg",
+    "code": "abc12s1",
+    "stock": 4,
+    "id": 4
+  }
+]
