@@ -102,7 +102,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"title\":\"Peras\",\r\n    \"description\":\"producto frutilla\",\r\n    \"price\": 10,\r\n    \"thumbnail\":\"img/10.jpg\",\r\n    \"code\":\"111u23\",\r\n    \"stock\":2\r\n}",
+					"raw": "{\r\n    \"title\":\"Mandarina\",\r\n    \"description\":\"producto frutil22la\",\r\n    \"price\": 78,\r\n    \"thumbnails\": [],\r\n    \"code\":\"messand22a\",\r\n    \"stock\":2,\r\n    \"status\": false,\r\n    \"category\": \"Frutas\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"

@@ -28,10 +28,14 @@ export default class ProductManager {
     addProduct = async(nuevo) => {
         try {        
             //valido que todos los campos esten cargados
-            if(!nuevo.title || !nuevo.description || !nuevo.price || !nuevo.thumbnail || !nuevo.code || !nuevo.stock){
-                console.log("Todos los datos son obligatorios");
+            if(!nuevo.title || !nuevo.description || !nuevo.price || !nuevo.code || !nuevo.stock || !nuevo.category){
+                console.log(" Todos los campos son obligatorios, a excepción de thumbnails");
                 return null;
             }
+            //por default status es true;
+            if (typeof nuevo.status === 'undefined') {
+                 nuevo.status = true;
+            }            
 
             //traigo el archivo de productos
             this.products = await this.getProducts();
