@@ -1,4 +1,4 @@
-## **📁 ECMAScript y ECMAScript avanzado **
+## 📁 ECMAScript y ECMAScript avanzado
 
 ### Consigna
 Realizar una clase “ProductManager” que gestione un conjunto de productos.
