@@ -1,15 +1,17 @@
-## 📁 ECMAScript y ECMAScript avanzado
+## 📁 Manejo de archivos
 
 ### Consigna
-Realizar una clase “ProductManager” que gestione un conjunto de productos.
+Realizar una clase de nombre “ProductManager”, el cual permitirá trabajar con múltiples productos. Éste debe poder agregar, consultar, modificar y eliminar un producto y manejarlo en persistencia de archivos (basado en entregable 1).
 
 ### Aspectos a incluir
-Debe crearse desde su constructor con el elemento products, el cual será un arreglo vacío.
+La clase debe contar con una variable this.path, el cual se inicializará desde el constructor y debe recibir la ruta a trabajar desde el momento de generar su instancia.
 
-Cada producto que gestione debe contar con las propiedades:
+Debe guardar objetos con el siguiente formato:
+- id (se debe incrementar automáticamente, no enviarse desde el cuerpo)
 - title (nombre del producto)
 - description (descripción del producto)
 - price (precio)
 - thumbnail (ruta de imagen)
 - code (código identificador)
 - stock (número de piezas disponibles)
+
