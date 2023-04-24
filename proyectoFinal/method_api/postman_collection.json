@@ -12,7 +12,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/products",
+					"raw": "http://localhost:8080/api/products?limit=2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -21,6 +21,12 @@
 					"path": [
 						"api",
 						"products"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "2"
+						}
 					]
 				}
 			},
