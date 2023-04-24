@@ -17,9 +17,7 @@ Para el manejo de productos, el cual tendrá su router en /api/products/ , confi
 	- stock:Number
 	- category:String
 	- thumbnails:Array de Strings que contenga las rutas donde están almacenadas las imágenes referentes a dicho producto
-⚠️ Importante
-Status es true por defecto.
-Todos los campos son obligatorios, a excepción de thumbnails
+⚠️ Status es true por defecto. Todos los campos son obligatorios, a excepción de thumbnails
 	
 - La ruta PUT /:pid deberá tomar un producto y actualizarlo por los campos enviados desde body. NUNCA se debe actualizar o eliminar el id al momento de hacer dicha actualización.
 - La ruta DELETE /:pid deberá eliminar el producto con el pid indicado. 
