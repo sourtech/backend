@@ -1,5 +1,3 @@
-# **CURSO BACKEND**
-
 ## **📁 entregable_2**
 
 ### Consigna
