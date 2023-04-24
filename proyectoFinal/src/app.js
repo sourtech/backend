@@ -5,6 +5,7 @@ import cartsRouter from './routes/carts.router.js'
 import __dirname from './utils.js';
 
 const app = express();
+const PORT = 8080;//puerto del server
 
 app.use(express.json());//para leer json
 app.use(express.urlencoded({extended:true})); //si recibo desde url
@@ -15,7 +16,7 @@ app.use('/api/products', productsRouter);
 app.use('/api/carts', cartsRouter);
 
 
-app.listen(8080, () => {
+app.listen(PORT, () => {
     try {
         console.log(`Server up!`);
     }
