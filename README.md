@@ -1,6 +1,6 @@
 # **CURSO BACKEND**
 
-## **entregable_2**
+## **📁 entregable_2**
 
 ### Consigna
 Realizar una clase “ProductManager” que gestione un conjunto de productos.
