@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Manzana",
+    "description": "producto uno actualizado",
+    "price": 10,
+    "thumbnails": [],
+    "code": "abc123",
+    "stock": 2,
+    "status": true,
+    "category": "Frutas",
+    "id": 1
+  },
+  {
+    "title": "Pera",
+    "description": "producto dos",
+    "price": 15,
+    "thumbnails": [],
+    "code": "abc122",
+    "stock": 3,
+    "status": true,
+    "category": "Frutas",
+    "id": 2
+  },
+  {
+    "title": "Tomate",
+    "description": "producto tres",
+    "price": 20,
+    "thumbnails": [],
+    "code": "abc121",
+    "stock": 4,
+    "status": true,
+    "category": "Frutas",
+    "id": 3
+  },
+  {
+    "title": "Mandarina",
+    "description": "producto frutil22la",
+    "price": 78,
+    "thumbnails": [],
+    "code": "nuevo",
+    "stock": 2,
+    "status": false,
+    "category": "Frutas",
+    "id": 4
+  }
+]
