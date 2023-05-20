@@ -9,7 +9,7 @@ import viewsRouter from './routes/views.router.js';
 import __dirname from './utils.js';
 import { Server } from 'socket.io';
 import socketRealTime from './components/socketRealTime.js';
-//import messagesModel from "./dao/mongo/models/messages.js";
+//import messagesModel from "./dao/mongo/models/messages.js"; 
 
 const app = express();
 const PORT = 8080;//puerto del server
