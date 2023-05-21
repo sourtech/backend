@@ -8,8 +8,8 @@ import cartsRouter from './routes/carts.router.js';
 import viewsRouter from './routes/views.router.js';
 import __dirname from './utils.js';
 import { Server } from 'socket.io';
-import socketRealTime from './components/socketRealTime.js';
-//import messagesModel from "./dao/mongo/models/messages.js"; 
+import socketRealTime from './listeners/socketRealTime.js';
+import registerChatHandler from './listeners/chat.js';
 
 const app = express();
 const PORT = 8080;//puerto del server
@@ -45,3 +45,4 @@ const server = app.listen(PORT, () => {
 });
 const io = new Server(server);
 socketRealTime(io);
+registerChatHandler(io);

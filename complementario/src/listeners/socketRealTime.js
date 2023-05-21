@@ -21,8 +21,7 @@ export default function socketRealTime(io){
             try {       
                 product.status = product.status==1 ? true : false; 
                 product.thumbnails = []; // por ahora no recibo imagenes                   
-                const result = await manager.addProduct(product);
-                
+                const result = await manager.addProduct(product);                
             }
             catch (err) {
                 console.log(err);

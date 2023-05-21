@@ -29,4 +29,8 @@ router.get('/realtimeproducts', (req, res) => {
     }     
 })
 
+router.get("/chat", async (req, res) => {
+    res.render("chat", {title:'Chat'});
+});
+
 export default router;
