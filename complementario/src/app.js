@@ -1,8 +1,6 @@
 import express from 'express';
 import handlebars from 'express-handlebars';
 import mongoose from "mongoose";
-
-import ProductManager from './dao/mongo/managers/productManager.js';
 import productsRouter from './routes/products.router.js';
 import cartsRouter from './routes/carts.router.js';
 import viewsRouter from './routes/views.router.js';
