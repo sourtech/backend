@@ -14,7 +14,11 @@ import socketRealTime from './components/socketRealTime.js';
 const app = express();
 const PORT = 8080;//puerto del server
 
-const connection = mongoose.connect("mongodb+srv://hernanroig:EiqvRFFEJ6KOuEYK@clustercitofeliz.ykziudq.mongodb.net/ecommerce?retryWrites=true&w=majority");
+const DB_USER = 'hernanroig';
+const DB_PASS = 'EiqvRFFEJ6KOuEYK';
+const DB_DB = 'ecommerce';
+
+const connection = mongoose.connect(`mongodb+srv://${DB_USER}:${DB_PASS}@clustercitofeliz.ykziudq.mongodb.net/${DB_DB}?retryWrites=true&w=majority`);
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));

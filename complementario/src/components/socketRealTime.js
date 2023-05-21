@@ -1,5 +1,5 @@
 import ProductManager from '../dao/mongo/managers/productManager.js';
-import __dirname from '../utils.js';
+
 const manager = new ProductManager();    
 
 export default function socketRealTime(io){
