@@ -8,14 +8,14 @@ export default function socketRealTime(io){
         const products = await manager.getProducts();
         
         //listado de productos
-        socket.emit('products', products);
+        socket.emit('products', products.docs);
 
         //borrado de un producto
         socket.on('delete', async pid => {
             //console.log(pid);
             const result = await manager.deleteProduct(pid); 
             const products = await manager.getProducts();
-            return socket.emit('products',  products);                       
+            return socket.emit('products',  products.docs);                       
         });
         
         //agregar
@@ -25,7 +25,7 @@ export default function socketRealTime(io){
                 product.thumbnails = []; // por ahora no recibo imagenes                   
                 const result = await manager.addProduct(product); 
                 const products = await manager.getProducts();
-                return socket.emit('products',  products);               
+                return socket.emit('products',  products.docs);               
             }
             catch (err) {
                 console.log(err);
@@ -33,6 +33,6 @@ export default function socketRealTime(io){
             
         });
 
-        console.log(products);
+        //console.log(products);
     }) 
 }

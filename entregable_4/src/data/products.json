@@ -42,5 +42,16 @@
     "status": false,
     "category": "Frutas",
     "id": 4
+  },
+  {
+    "title": "test",
+    "price": "1",
+    "code": "1",
+    "stock": "1",
+    "category": "dos",
+    "status": true,
+    "thumbnails": [],
+    "description": "sdsdfdsf",
+    "id": 5
   }
 ]

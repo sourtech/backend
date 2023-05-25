@@ -1,0 +1,70 @@
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">Productos</h1>    
+            
+                <code>
+                    <h4>Algunas ejemplo de filtrados</h4>
+                <a class="d-block" href="/?sort=-1&limit=6&categoria=Drama">VER: Categoria Drama Limit 6 Orden ASC</a>
+                <a class="d-block" href="/?sort=1&limit=6&categoria=Drama">VER: Categoria Drama Limit 6 Orden DESC</a>
+                <a class="d-block" href="/?limit=3">VER: Todas limitado a 3</a>
+                <a class="d-block" href="/?limit=3&stock=1">VER: Solo las que tengan Stock limitado a 3</a>
+               </code>
+                         
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="row">
+        {{#each payload.docs }}
+        <div class="col-md-4">
+            <div class="card text-bg-light mb-3">
+                <h4 class="card-header">{{this.title}}</h4>
+                <div class="card-body">
+                    <p class="card-text">{{this.description}}</p>                  
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Precio: {{this.price}} $</li>
+                    <li class="list-group-item">Categoría: {{this.category}}</li>
+                    <li class="list-group-item">Estado: {{this.status}}</li>
+                    <li class="list-group-item">Stock: {{this.stock}}</li>
+                    <li class="list-group-item">Imagenes: {{this.thumbnail}}</li>
+                </ul> 
+
+                <div class="card-body text-center">
+                    <a href="/cart/add-to-cart/{{this._id}}" class="btn btn-raised btn-success pull-right">Agregar</a>                  
+                </div>                               
+        
+            </div>
+        </div>
+        {{else}}
+            <div class="col-md-12">
+                <p class="text-center d-block">No hay productos para mostrar 😢</p>
+                <a class="text-center d-block" href="javascript: history.go(-1)">Volver</a>
+            </div>            
+        {{/each}}
+
+        {{#if payload.docs }}
+        <div class="col-md-12">
+            <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                {{#if payload.prevLink}}
+                    <li class="page-item">
+                        <a class="page-link" href="?{{payload.prevLink}}">Anterior</a>
+                    </li>
+                {{/if}}
+                <li class="page-item active"><span class="page-link" href="#">{{payload.page}}</span></li>
+                {{#if payload.nextLink}}
+                    <li class="page-item">
+                        <a class="page-link" href="?{{payload.nextLink}}">Siguiente</a>
+                    </li>
+                {{/if}}                
+            </ul>
+            </nav>
+        </div>
+        {{/if}}
+    </div>
+</div>
+
+

@@ -3,3 +3,7 @@
 /entregable_4/node_modules
 /proyectoFinal/node_modules
 /complementario/node_modules
+/proyectoFinal_2/node_modules
+
+node_modules
+package-lock.json
