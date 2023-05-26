@@ -25,9 +25,8 @@ export default class CartManager {
             return err
         }
 
-    }  
-    
-    
+    }     
+    /*
     addProductInCart = async (cid, productFromBody) => {
 
             const cart = await cartModel.findOne({ _id: cid })
@@ -54,7 +53,7 @@ export default class CartManager {
             return await cartModel.findOne({ _id: cid })
 
     }    
-
+*/
     addProduct = async (id, nuevo) => {       
         const cart = await this.getCartById(id)
         const find = cart.products.findIndex(product => product._id._id.toString() === nuevo._id);
@@ -71,4 +70,27 @@ export default class CartManager {
 
     };   
     
+    removeProduct = async (id, idProduct) => {       
+        const cart = await this.getCartById(id);
+
+        const find = cart.products.findIndex(product => product._id._id.toString() === idProduct);
+
+        if (find === -1) {
+            return false;
+        }
+        cart.products.splice(find, 1);
+        //actualizo
+        const updated = await cartModel.findByIdAndUpdate(id, { $set: cart })
+        return true;
+
+    };      
+
+    removeAll = async (id) => {       
+        const cart = await this.getCartById(id);
+        //borro todos los productos, pero dejo el ID del cart por ahora
+        cart.products = [];
+        const updated = await cartModel.findByIdAndUpdate(id, { $set: cart })
+        return true;
+
+    };        
 }

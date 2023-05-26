@@ -6,30 +6,12 @@ const manager = new CartManager();
 const router = Router();
 
 /*
- * Agregar al carrito NO FUNCIONA AUN
-*/
-router.get('/cart/add-to-cart/:id', function (req, res) {
-    const productId = req.params.id;
-    const cart = new Cart(req.session.cart ? req.session.cart : {});
-
-    Product.findById(productId, function (err, product) {
-        if(err) {
-            return res.redirect('/');
-        }
-        cart.add(product, product.id);
-        req.session.cart = cart;
-        console.log(req.session.cart);
-        res.redirect('/');
-    })
-});
-
-/*
 * traigo todos
 */
 router.get('/', async(req,res)=>{
     try {
         const result = await manager.getCarts();
-        console.log(result);
+        //console.log(result);
         if (result.status === 'error'){
             return res.status(400).send({ result });
         }
@@ -89,6 +71,60 @@ router.post('/:cid/product/:pid', async(req,res)=>{
         console.log(err);
     }        
 })
+
+/*
+ * Agregar al carrito 1 producto
+*/
+router.get('/add/:id', async (req, res) => {
+    const productId = req.params.id;
+
+    //EL ID por el momento es siempre este
+    const cid = '6471261cc14d2ac4b71e7463'; 
+
+    const nuevo = {
+        _id:productId, 
+        quantity:1
+    };
+    const result = await manager.addProduct({ _id: cid }, nuevo);
+    res.redirect('/cart');
+});
+
+/*
+ * Borrar todos los productos del carrito
+*/
+router.get('/remove/all', async (req, res) => {
+    //EL ID por el momento es siempre este
+    const cid = '6471261cc14d2ac4b71e7463'; 
+    const result = await manager.removeAll({ _id: cid });
+    if(result){
+       return res.redirect('/cart');
+    }
+    //si no existe el producto lo mando a home
+    //a futuro pondre un aviso
+    res.redirect('/');
+    
+});
+
+/*
+ * Borrar del carrito un producto
+*/
+router.get('/remove/:id', async (req, res) => {
+    const productId = req.params.id;
+
+    //EL ID por el momento es siempre este
+    const cid = '6471261cc14d2ac4b71e7463'; 
+
+    const result = await manager.removeProduct({ _id: cid }, productId);
+    if(result){
+        return res.redirect('/cart');
+    }
+    //si no existe el producto lo mando a home
+    //a futuro pondre un aviso
+    res.redirect('/');
+    
+});
+
+
 
 
 

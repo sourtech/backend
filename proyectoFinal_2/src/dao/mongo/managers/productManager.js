@@ -35,13 +35,22 @@ export default class ProductsManager {
         if(products){
             /*https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams*/
             let newUrl = req.originalUrl.replace('?','');
+            newUrl = newUrl.replace('/products/','');
             newUrl = newUrl.replace('/','');
+           //console.log(newUrl);
             const params = new URLSearchParams(newUrl);
-
             if(params.has('page')){
                 params.delete('page');
                 params.append('page', products.page);
             }
+            //si estoy en la pagina products me llega como parametro, no me interesa
+            if(params.has('/')){
+                params.delete('/');
+            }  
+            if(params.has('/products/')){
+                params.delete('/products/');
+            }                
+            //console.log(params);
             if(products.hasPrevPage){
                 params.set("page", products.prevPage);
                 products.prevLink = params.toString();
@@ -49,17 +58,10 @@ export default class ProductsManager {
             if(products.hasNextPage){
                 params.set("page", products.nextPage);
                 products.nextLink = params.toString();
-            }
+            }    
         }
         return products;
     };
-
-    createLinkPaginate = (url, param) => {
-        const [path, searchParams] = url.split('?');  const newSearchParams = searchParams
-          ?.split('&')
-          .filter((p) => !(p === param || p.startsWith(`${param}=`)))
-          .join('&');  return newSearchParams ? `${path}?${newSearchParams}` : path;
-      }    
 
     getProductById = (params) => {
         return productModel.findOne(params).lean();
