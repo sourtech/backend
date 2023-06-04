@@ -18,27 +18,34 @@ router.post("/register", async (req, res) => {
 */
 router.post("/login", async (req, res) => {
     const { email, password } = req.body;
-    const user = await manager.getUsersBy({ email, password });
-    console.log(user);
-    if (!user) {
-      return res
-        .status(400)
-        .send({ status: "error ", error: "usuario no encontrado" });
+
+	//que esten los dos datos, user y pass
+    if(!email || !password){
+    	return res.status(400).send({ status: "error ", error: "Debe ingresar el usuario y contraseña" });
     }
-    if(email === "adminCoder@coder.com" && password === "123456") {
-        req.session.user = {
-            name: "Coder Admin",
-            email: user.email,
-            role: "admin",
-        };
-    } else {
-        req.session.user = {
-            name: `${user.first_name} ${user.last_name}`,
-            email: user.email,
-            role: "usuario",
-        };
-    }
-    res.send({ status: "success" });
+	let validUser = {};
+	//si es el usuario especial
+	if(email === "adminCoder@coder.com" && password === "adminCod3r123") {
+		validUser = {
+			name: "Coder Admin", 
+			email: "adminCoder@coder.com", 
+			role: "admin"
+		};
+	}else{
+		//si no es especial busco en base
+		const user = await manager.getUsersBy({ email });
+		if (!user || password!==user.password) {
+			return res.status(400).send({ status: "error ", error: "usuario no encontrado" });
+		}
+		validUser = {
+			name: `${user.first_name} ${user.last_name}`, 
+			email: user.email, 
+			role: "usuario"
+		};		
+	}
+	//guardo en sesion
+	req.session.user = validUser;
+	res.send({ status: "success" });    
   });
 
   /*
@@ -47,10 +54,7 @@ router.post("/login", async (req, res) => {
   router.get("/logout", (req, res) => {
     req.session.destroy((err) => {
         if (err) {
-            console.error("Error al destruir la sesión:", err);
-        return res
-          .status(500)
-          .send({ status: "error", error: "Error al cerrar sesión" });
+        	return res.status(500).send({ status: "error", error: "Error al cerrar sesión" });
         }  
         res.redirect('/login');
     });

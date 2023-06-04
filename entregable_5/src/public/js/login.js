@@ -18,13 +18,14 @@ form.addEventListener("submit", async (event) => {
     if (resposeData.status === "success") {
         window.location.replace("/products/");
     } else {
+        console.log(resposeData);
         //alert("aca");
         Swal.fire({
             toast: true,
             position: "top",
             showConfirmButton: false,
             timer: 2500,
-            title: `Usuario o clave incorrectos`,
+            title: resposeData.error,
             icon: "error",
         });
     }

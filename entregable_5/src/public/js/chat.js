@@ -1,7 +1,6 @@
 const socketChat = io({
     autoConnect: true // si lo dejo en false como deberia, no me llega a mandar el emit login
 });
-  
 let user;
   
 const chatBox = document.getElementById("text");
