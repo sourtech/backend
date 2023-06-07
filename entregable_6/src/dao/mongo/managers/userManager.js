@@ -10,7 +10,6 @@ export default class UserManager {
     };
 
     createUsers = (user) => {
-        //compruebo si existe el email
         return userModel.create(user);
     };
 

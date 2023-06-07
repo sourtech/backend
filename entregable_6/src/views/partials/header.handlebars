@@ -1,0 +1,18 @@
+<header class="site-header sticky-top py-1">
+    <nav class="container">
+        <a class="py-2 d-none d-md-inline-block mr-4" href="/">Home</a>
+        <a class="py-2 d-none d-md-inline-block mr-4" href="/realtimeproducts">RealTimeProducts</a>
+        <a class="py-2 d-none d-md-inline-block mr-4" href="/products/">Products</a>
+        <a class="py-2 d-none d-md-inline-block mr-4" href="/chat">Chat</a>
+        
+        {{#if user}}
+            <a class="py-2 d-none d-md-inline-block mr-4 float-right" href="/api/sessions/logout">Salir</a>
+            <a class="py-2 d-none d-md-inline-block mr-4 float-right" href="/profile">{{user.name}} ({{user.role}})</a>
+        {{else}}          
+            <a class="py-2 d-none d-md-inline-block mr-4 float-right" href="/register">Registrarse</a>
+            <a class="py-2 d-none d-md-inline-block mr-4 float-right" href="/login">Login</a>
+        {{/if}}        
+        <a class="py-2 d-none d-md-inline-block mr-4 float-right" href="/cart">Cart</a>
+    </nav>
+</header> 
+
