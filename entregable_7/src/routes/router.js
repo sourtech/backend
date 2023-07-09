@@ -40,13 +40,22 @@ export default class BaseRouter {
                 return next();
             }
             const user = req.user;
+            if (policies[0] === "LOGIN" && !user){
+                return res.redirect('/login');
+            }
+            if (policies[0] === "LOGIN" && user){
+                return next();
+            }            
             if (policies[0] === "github") {
                // console.log('politica github');
                 return next();
             }
+            if (policies[0] === "AUTH" && !user) {
+                return res.status(401).send({ status: "error", error: "Unauthorized Router doesn't exist the user" });
+            }
             if (policies[0] === "AUTH" && user) {                
                 return next();
-            }
+            }            
             if (policies[0] === "NO_AUTH" && user){
                 return res.status(401).send({ status: "error", error: "Unauthorized Router" });
             }

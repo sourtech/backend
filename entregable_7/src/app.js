@@ -17,7 +17,6 @@ import config from './config/config.js';
 
 const app = express();
 const PORT = config.port;
-console.log(config.mongo_url);
 const connection = mongoose.connect(config.mongo_url);
 
 app.use(express.json());
