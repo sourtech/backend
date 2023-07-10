@@ -4,8 +4,8 @@ import GithubStrategy from 'passport-github2';
 import UserManager from "../dao/mongo/managers/userManager.js";
 import CartManager from "../dao/mongo/managers/cartManager.js";
 import { cookieExtractor, createHash, validatePassword } from '../utils.js';
-//import { generateToken } from '../utils.jwt.js';
 import { Strategy, ExtractJwt } from 'passport-jwt';
+import config from './config.js';
 
 
 const manager = new UserManager();
@@ -54,12 +54,12 @@ const initializePassportStrategies = () => {
 					return done(null, false, { message: '"Debe ingresar el usuario y contraseña' });
 				}				
 				//Usuario ADMIN
-				if(email === "adminCoder@coder.com" && password === "adminCod3r123") {
+				if(email === config.admin_email && password === config.admin_password) {
 					//Desde aquí ya puedo inicializar al admin.
 					const user = {
 						id: 0,
 						name: "Coder Admin", 
-						email: "adminCoder@coder.com", 
+						email: config.admin_email, 
 						role: "admin"
 					};
 					return done(null, user);
@@ -89,9 +89,9 @@ const initializePassportStrategies = () => {
   	);
 
 	passport.use('github', new GithubStrategy({
-		clientID: "Iv1.c7eac881e994f991",
-		clientSecret: "e1430961e12d88f75cff88f237da62384453bf48",
-		callbackURL: "http://localhost:8080/api/sessions/githubcallback"
+		clientID: config.github_id,
+		clientSecret: config.github_secret,
+		callbackURL: config.github_url
 	}, async(accessToken, refreshToken, profile, done) => {
 		try{
 			//console.log(profile);
@@ -123,7 +123,7 @@ const initializePassportStrategies = () => {
     passport.use('jwt', new Strategy(		
         {
             jwtFromRequest: ExtractJwt.fromExtractors([cookieExtractor]),
-            secretOrKey:'secreta',
+            secretOrKey:config.jwt_secret,
     
         }, async(payload, done) => {
             try {

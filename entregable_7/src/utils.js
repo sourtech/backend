@@ -12,7 +12,7 @@ export const createHash = async(password) => {
 export const validatePassword = async (password, hashedPassword) => bycrypt.compare(password, hashedPassword);
 
 export const passportCall = (strategy,options={}) =>{
-    console.log(strategy, options.strategyType, 'estrategia');
+    //console.log(strategy, options.strategyType, 'estrategia');
     return async(req,res,next) =>{
         // if(strategy === 'AUTH') return next();
         passport.authenticate(strategy,(error,user,info)=>{

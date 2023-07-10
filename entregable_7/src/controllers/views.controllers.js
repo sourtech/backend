@@ -67,8 +67,51 @@ const getProducts = async (req, res) => {
     } 
 }
 
+const getLogin = (req, res) => {
+    res.render("login", { title:'Login' });    
+}
+
+const getRegister = (req, res) => {
+    res.render("register", { title:'Registro' });
+}
+
+const getChat = (req, res) => {
+    res.render("chat", {title:'Chat', user: req.user});
+}
+
+const getProfile = (req, res) => {
+    res.render("profile", { 
+        status:'success', 
+        user: req.user,  
+        title:'Profile' 
+    })      
+}
+
+const getCart = async (req, res) => {
+    //const idCart = '6471261cc14d2ac4b71e7463';
+    const idCart = req.user.cart;
+    const cart = await cartService.getCartById(idCart);
+
+    let total=0,numeros = [1, 2, 3, 4, 5];
+    cart.products.forEach(function(a){total += a.quantity;});
+    //console.log(total);
+    cart.total = total;
+    // const total = carproducts.forEach(prod => console.log(element));
+    res.render("cart", { 
+        status:'success', 
+        payload:cart, 
+        user: req.user,
+        title:'Cart' 
+    })    
+}
+
 export default {
     getHome,
     getRealTime,
-    getProducts
+    getProducts,
+    getLogin,
+    getRegister,
+    getChat,
+    getProfile,
+    getCart
 }
