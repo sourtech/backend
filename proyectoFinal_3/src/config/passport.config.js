@@ -1,15 +1,19 @@
 import passport from 'passport';
 import local from 'passport-local';
 import GithubStrategy from 'passport-github2';
-import UserManager from "../dao/mongo/managers/userManager.js";
-import CartManager from "../dao/mongo/managers/cartManager.js";
+//import UserManager from "../dao/mongo/managers/userManager.js";
+//import CartManager from "../dao/mongo/managers/cartManager.js";
+import { userService, cartService } from '../services/repositories/index.js';
+
+import userDTO from "../dtos/userDTO.js";
+
 import { cookieExtractor, createHash, validatePassword } from '../utils.js';
 import { Strategy, ExtractJwt } from 'passport-jwt';
 import config from './config.js';
 
 
-const manager = new UserManager();
-const cart = new CartManager();
+const manager = userService;
+const cart = cartService;
 
 const LocalStrategy = local.Strategy; // UNA ESTRATEGIA LOCAL SIEMPRE SE BASA EN EL USERNAME + PASSWORD
 
@@ -76,6 +80,7 @@ const initializePassportStrategies = () => {
 				if (!isValidPassword){
 					return done(null, false, { message: 'Contraseña inválida' });
 				}
+				/*
 				user = {
 					id: user._id,
 					name: `${user.first_name} ${user.last_name}`,
@@ -83,7 +88,9 @@ const initializePassportStrategies = () => {
 					role: user.role,
 					cart: user.cart,
 				};
-				return done(null, user);
+				*/
+				const nuser = new userDTO(user);				
+				return done(null, nuser);
 			}
 		)
   	);

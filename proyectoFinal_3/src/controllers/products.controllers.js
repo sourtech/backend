@@ -1,4 +1,4 @@
-import { productService } from '../services/index.js';
+import { productService } from '../services/repositories/index.js';
 
 const getProducts = async (req, res) => {
     //limit puede llegar como query string

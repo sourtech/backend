@@ -1,4 +1,4 @@
-import { cartService } from '../services/index.js';
+import { cartService } from '../services/repositories/index.js';
 
 const getCarts = async (req, res) => {
     try {

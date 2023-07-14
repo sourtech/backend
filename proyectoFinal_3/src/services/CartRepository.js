@@ -1,7 +1,10 @@
 
-export default class CartService {
+export default class CartRepository {
     constructor(dao){
         this.dao = dao;
+    }
+    createCart = () => {
+        return this.dao.createCart();
     }
 
     getCarts = () => {

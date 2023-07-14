@@ -1,4 +1,4 @@
-import { productService, cartService } from "../services/index.js";
+import { productService, cartService } from "../services/repositories/index.js";
 
 const getHome = async (req, res) => {
     try {  
@@ -89,10 +89,11 @@ const getProfile = (req, res) => {
 
 const getCart = async (req, res) => {
     //const idCart = '6471261cc14d2ac4b71e7463';
+    //console.log('viendo cart');
     const idCart = req.user.cart;
     const cart = await cartService.getCartById(idCart);
 
-    let total=0,numeros = [1, 2, 3, 4, 5];
+    let total=0;
     cart.products.forEach(function(a){total += a.quantity;});
     //console.log(total);
     cart.total = total;
