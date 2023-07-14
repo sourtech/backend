@@ -5,6 +5,7 @@ import cookieParser from 'cookie-parser'
 import ProductsRouter from './routes/products.router.js';
 import CartsRouter from './routes/carts.router.js';
 import SessionRouter from "./routes/session.router.js";
+import TicketRouter from "./routes/ticket.router.js";
 import ViewsRouter from './routes/views.router.js';
 
 import __dirname from './utils.js';
@@ -32,11 +33,13 @@ initializePassportStrategies();
 const sessionRouter = new SessionRouter();
 const productsRouter = new ProductsRouter();
 const cartsRouter = new CartsRouter();
+const ticketRouter = new TicketRouter();
 const viewsRouter = new ViewsRouter();
 
 app.use('/api/products', productsRouter.getRouter());
 app.use('/api/carts', cartsRouter.getRouter());
 app.use("/api/sessions", sessionRouter.getRouter());
+app.use("/api/tickets", ticketRouter.getRouter());
 //Vistas 
 app.use('/', viewsRouter.getRouter());
 

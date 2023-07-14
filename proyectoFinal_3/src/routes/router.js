@@ -28,6 +28,7 @@ export default class BaseRouter {
     generateCustomResponses = (req, res, next) => {
         res.sendSuccess = message => res.send({ status: 'success', message });
         res.sendSuccessWithPayload = payload => res.send({ status: 'success', payload });
+        res.sendErrorWithPayload = payload => res.send({ status: 'error', payload });
         res.sendInternalError = error => res.status(500).send({ status: 'error', error });
         res.sendUnauthorized = error => res.status(400).send({ status: 'error', error });
         next();
@@ -62,6 +63,12 @@ export default class BaseRouter {
             if (policies[0] === "NO_AUTH" && !user){
                 return next();
             } 
+            if (policies[0] === "ADMIN" && user ){
+                if(user.role==='admin'){
+                    return next();
+                }
+                return res.status(401).send({ status: "error", error: "Only admin" });
+            }            
 
             if (!user) return res.status(401).send({ status: "error", error: req.error });
           //  console.log(policies[0]);
