@@ -37,4 +37,4 @@
   - Al final, utilizar el servicio de Tickets para poder generar un ticket con los datos de la compra.
   - En caso de existir una compra no completada, devolver el arreglo con los ids de los productos que no pudieron procesarse.
 
-  Una vez finalizada la compra, el carrito asociado al usuario que compró deberá contener sólo los productos que no pudieron comprarse. Es decir, se filtran los que sí se compraron y se quedan aquellos que no tenían disponibilidad.
+- Una vez finalizada la compra, el carrito asociado al usuario que compró deberá contener sólo los productos que no pudieron comprarse. Es decir, se filtran los que sí se compraron y se quedan aquellos que no tenían disponibilidad.
