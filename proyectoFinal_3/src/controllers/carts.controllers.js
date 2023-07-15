@@ -76,7 +76,7 @@ const removeAll = async (req, res) => {
     const cid = req.user.cart;     
     const result = await cartService.removeAll({ _id: cid });
     if(result){
-    return res.redirect('/cart');
+        return res.redirect('/cart');
     }
     //si no existe el producto lo mando a home
     //a futuro pondre un aviso

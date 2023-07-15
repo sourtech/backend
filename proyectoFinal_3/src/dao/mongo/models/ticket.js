@@ -4,12 +4,11 @@ const collection = "tickets";
 
 const schema = new mongoose.Schema(
   {
-    id: String,
     code: String,
     amount: Number,
     purchaser: String, //el correo del usuario
   },
-  { timestamps: { createdAt: "created_at", updatedAt: "updated_at" } }
+  { timestamps: { createdAt: "purchase_datetime", updatedAt: "updated_at" } }
 );
 
 const ticketModel = mongoose.model(collection, schema);

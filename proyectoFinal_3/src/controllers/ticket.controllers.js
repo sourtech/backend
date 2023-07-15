@@ -1,53 +1,64 @@
+import cryptoRandomString from 'crypto-random-string';
 import { cartService, productService, ticketService } from '../services/repositories/index.js';
 
 const createTicket = async (req, res) => {
-    const idCart = req.user.cart;
+    // podria usar el que me llega por param req.params.cid, pero es lo mismo
+    // mas seguro el de la base que tiene asignado el usuario
+    const idCart = req.user.cart; 
     const cart = await cartService.getCartById(idCart);
     if(!cart){
         return res.sendErrorWithPayload('no existe cart');
     }
-    let newCart = []; //aca el carro sin stock, que pasara a ser el nuevo carro
-    let cartStock = []; //aca voy a tener el carro para enviar
-    //recorro los productos
+    //hago un nuevo arreglo SIN Stock (va a ser el nuevo carrito del usuario)
+    const productosSinStock = cart.products.filter(producto => producto.quantity>producto._id.stock);
+    //Con stock (los que voy a descontar stock)
+    const productosConStock = cart.products.filter(producto => producto.quantity<=producto._id.stock);
+    //La suma de todos los productos que termina compando
 
-    const pepe = cart.products.forEach(async function (product){
-        //compruebo si tengo stock
-        const prod = await productService.getProductById(product._id._id);
-        if(prod.stock<product.quantity){
-            //sin stock
-            newCart.push({_id:prod._id, quantity:product.quantity});
-        }else{
-            //con stock
-            //descuento al stock
-            let newStock = prod.stock - product.quantity
-            //creo en nuevo carro
-            cartStock.push({_id:prod._id, quantity:newStock});
+    await cartService.removeAll(idCart);
+
+    //De los que si tengo stock, los recorro para bajar el stock en productos
+    productosConStock.forEach( async (prod) => {
+        let newStock = {
+            stock: prod._id.stock-prod.quantity
         }
-    });   
-console.log(pepe);
-    console.error('Nuevo carrito');
-    console.log(newCart);
-    console.error('vendido')
-    console.log(cartStock);    
+        await productService.downStock({ _id: prod._id._id }, newStock)  
+        
+        const nuevo = {
+            _id:prod._id._id, 
+            quantity:prod.quantity
+        };
+        const result = await cartService.addProduct({ _id: idCart }, nuevo);       
+    });
 
-    //limit puede llegar como query string
-    //console.log(req);
+    //al carrito del usuario ahora le dejo los que no pudo comprar
+
+
     /*
-    const limit = req.query.limit;
-
-    // traigo todos los productos
-    const products = await productService.getProducts();
-
-    //si tengo limit y es numerico
-    if(limit && limit.match(/^[0-9]+$/) != null){
-        //si el limit es superior a la cantidad no importa, muestro los que tengo
-        //NUEVO
-        //en la sigiente etapa el limit lo tengo que hacer directamente en MONGO no traer todo y luego limitar
-        const limitProducts = products.docs.slice(0, limit);
-        return res.send(limitProducts);
+    productosSinStock.forEach( async (prod) => {
+        let nuevo = {
+            _id:prod._id._id, 
+            quantity:prod.quantity
+        };
+        console.log(nuevo)
+        await cartService.addProductNew(idCart, nuevo);
+    });
+*/
+/*
+    const amount = productosConStock.reduce((accumulator, current) => accumulator + current.quantity, 0)
+    //genero el ticket
+    const ticket = {
+        code: cryptoRandomString({length: 10}),
+        amount: amount,
+        purchaser: req.user.email
     }
-    // sin limit
-    */
+
+    const newTicket  = await ticketService.createTicket(ticket);
+*/
+ console.log(newTicket)
+ 
+
+
     return res.status(200).send();
     //return res.status(200).send({ products });
 }

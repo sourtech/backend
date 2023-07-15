@@ -37,13 +37,13 @@
     -webkit-box-orient: vertical;
     min-height: 100px;
 }
-.sin-stock{
+.product .stock{
     position: absolute;
     bottom: 0;
     left: 0;
     margin: 0 0 5px 5px;
 }
-.category{
+.product .category{
     position: absolute;
     top: 0;
     right: 0;

@@ -1,8 +1,13 @@
-<div class="card mb-3">
+<div class="card mb-3 product">
     <div class="position-relative">
         <img class="card-img-top shop-image  img-fluid" src="https://dummyimage.com/600x400/ccc/000&text=" alt="{{ this.title }}">
-        {{#unless this.stock}}<span class="badge badge-danger sin-stock">Sin Stock</span>{{/unless}}
+        
         <span class="badge badge-success category">{{ this.category }}</span>
+        {{#if this.stock}}
+            <span class="badge badge-primary stock">Stock {{ this.stock }}</span>
+        {{else}}
+            <span class="badge badge-danger stock">Sin stock</span>
+         {{/if}}
     </div>    
     <div class="card-body">
         <h4 class="card-title product-title">{{ this.title }}</h4>

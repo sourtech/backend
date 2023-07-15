@@ -80,5 +80,8 @@ export default class ProductsManager {
         return productModel.findByIdAndUpdate(id, { $set: product });
     };
 
+    downStock = (id, product) => {
+        return productModel.findByIdAndUpdate(id, { $set: product });
+    };
 
 }

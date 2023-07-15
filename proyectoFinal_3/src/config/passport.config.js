@@ -62,11 +62,13 @@ const initializePassportStrategies = () => {
 					//Desde aquí ya puedo inicializar al admin.
 					const user = {
 						id: 0,
-						name: "Coder Admin", 
+						first_name: "Coder", 
+						last_name: "Admin",
 						email: config.admin_email, 
 						role: "admin"
 					};
-					return done(null, user);
+					const nuser = new userDTO(user);
+					return done(null, nuser);
 				}
 				let user;
 				//Busco en base

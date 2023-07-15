@@ -4,7 +4,7 @@ export default class TicketRepository {
         this.dao = dao;
     }
 
-    createTicket = (options, req, paginate) => {
-        return this.dao.createTicket(options, req, paginate);
+    createTicket = (ticket) => {
+        return this.dao.createTicket(ticket);
     }
 }

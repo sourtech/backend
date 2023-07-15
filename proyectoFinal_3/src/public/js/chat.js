@@ -1,10 +1,10 @@
 const socketChat = io({
     autoConnect: true // si lo dejo en false como deberia, no me llega a mandar el emit login
 });
-let user;
+let user = document.getElementById("user").value;
   
 const chatBox = document.getElementById("text");
-  
+/*
 Swal.fire({
     title: "identificate",
     text: "para acceder al chat coloca tu username",
@@ -20,7 +20,7 @@ Swal.fire({
     socketChat.connect();
     socketChat.emit("login", user);
 });
-  
+  */
 chatBox.addEventListener("keyup", (evt) => {
     if (evt.key === "Enter") {
         if (chatBox.value.trim().length > 0) {

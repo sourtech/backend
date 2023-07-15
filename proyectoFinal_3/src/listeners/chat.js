@@ -1,5 +1,7 @@
 import MessageManager from '../dao/mongo/managers/massageManager.js';
 
+/* DEBERIA PASARLO A REPOSITORY POR EL MOMENTO QUEDA ASI */
+
 const chat = new MessageManager();    
 
 export default function chatRealTime(io){

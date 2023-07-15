@@ -6,7 +6,7 @@ const getHome = async (req, res) => {
             
         const options = {
             page: Number(page) || 1,
-            limit: Number(limit) || 10,//por default es 10
+            limit: Number(limit) || 12,//por default es 10
             category: category, //el campo a buscar por ahora solo filtro por categoria
             stock: stock || '',//solo si stock llega como 1 filtro a los que tengan stock
             sort: sort || '' //ordena por precio ? sort=1 o sort=-1
@@ -46,7 +46,7 @@ const getProducts = async (req, res) => {
         const { limit, page, sort, category, stock } = req.query                
         const options = {
             page: Number(page) || 1,
-            limit: Number(limit) || 10,//por default es 10
+            limit: Number(limit) || 12,//por default es 12
             category: category, //el campo a buscar por ahora solo filtro por categoria
             stock: stock || '',//solo si stock llega como 1 filtro a los que tengan stock
             sort: sort || '' //ordena por precio ? sort=1 o sort=-1
@@ -58,7 +58,7 @@ const getProducts = async (req, res) => {
             status:status, 
             payload:products,
             user: req.user,  
-            title:'Home' 
+            title:'Productos' 
         })
     }
     catch (err) {
@@ -76,6 +76,7 @@ const getRegister = (req, res) => {
 }
 
 const getChat = (req, res) => {
+    console.log(req.user)
     res.render("chat", {title:'Chat', user: req.user});
 }
 
@@ -94,10 +95,15 @@ const getCart = async (req, res) => {
     const cart = await cartService.getCartById(idCart);
 
     let total=0;
-    cart.products.forEach(function(a){total += a.quantity;});
-    //console.log(total);
+    let price=0;
+    cart.products.forEach(function(a){
+        total += a.quantity;
+        price += a._id.price*a.quantity;
+    });
+    //console.log(price);
     cart.total = total;
-    // const total = carproducts.forEach(prod => console.log(element));
+    cart.price = price;
+    
     res.render("cart", { 
         status:'success', 
         payload:cart, 

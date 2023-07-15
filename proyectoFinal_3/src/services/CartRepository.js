@@ -23,6 +23,11 @@ export default class CartRepository {
         return this.dao.addProduct(cid, nuevo)
     }
 
+    addProductNew = (cid, nuevo) => {
+        return this.dao.addProductNew(cid, nuevo)
+    }
+
+
     removeAll = (cid) => {
         return this.dao.removeAll(cid)
     }

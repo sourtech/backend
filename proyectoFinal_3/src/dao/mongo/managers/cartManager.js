@@ -31,34 +31,7 @@ export default class CartManager {
         }
 
     }     
-    /*
-    addProductInCart = async (cid, productFromBody) => {
 
-            const cart = await cartModel.findOne({ _id: cid })
-            const findProduct = cart.products.some(
-                (product) => product._id._id.toString() === productFromBody._id)
-
-            if (findProduct) {
-                await cartModel.updateOne(
-                    { _id: cid, "products._id": productFromBody._id },
-                    { $inc: { "products.$.quantity": productFromBody.quantity } })
-                return await cartModel.findOne({ _id: cid })
-            }
-
-            await cartModel.updateOne(
-                { _id: cid },
-                {
-                    $push: {
-                        products: {
-                            _id: productFromBody._id,
-                            quantity: productFromBody.quantity
-                        }
-                    }
-                })
-            return await cartModel.findOne({ _id: cid })
-
-    }    
-*/
     addProduct = async (id, nuevo) => {       
         const cart = await this.getCartById(id)
 
@@ -74,7 +47,14 @@ export default class CartManager {
         //devuelvo el carro completo
         return this.getCartById(id);
 
-    };   
+    };  
+    
+    addProductNew = async (id, nuevo) => { 
+        //actualizo
+        const updated = await cartModel.findByIdAndUpdate(id, { $set: nuevo })
+        return updated;
+
+    };    
     
     removeProduct = async (id, idProduct) => {       
         const cart = await this.getCartById(id);

@@ -63,12 +63,19 @@ export default class BaseRouter {
             if (policies[0] === "NO_AUTH" && !user){
                 return next();
             } 
+            if (policies[0] === "USER" && user ){
+                if(user.role==='usuario'){
+                    return next();
+                }
+                return res.status(401).send({ status: "error", error: "Only user" });
+            }  
+            
             if (policies[0] === "ADMIN" && user ){
                 if(user.role==='admin'){
                     return next();
                 }
                 return res.status(401).send({ status: "error", error: "Only admin" });
-            }            
+            }  
 
             if (!user) return res.status(401).send({ status: "error", error: req.error });
           //  console.log(policies[0]);
