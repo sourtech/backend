@@ -54,7 +54,7 @@ const updateProduct = async (req, res) => {
     try {
         const pid = req.params.pid;
         const product = req.body;
-        const result = await productService.updateProduct(Number(pid), product);
+        const result = await productService.updateProduct(pid, product);
 
         if (result.status === 'error'){
             return res.status(400).send({ result });
