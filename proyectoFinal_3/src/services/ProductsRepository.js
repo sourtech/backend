@@ -17,12 +17,12 @@ export default class ProductRepository {
         return this.dao.addProduct(product)
     }
 
-    updateProduct = (id) => {
-        return this.dao.updateProduct(id)
+    updateProduct = (id, product) => {
+        return this.dao.updateProduct(id,product)
     }
-
+/*
     downStock = (id, product) => {
          return this.dao.downStock(id, product)
     }
-
+*/
 }

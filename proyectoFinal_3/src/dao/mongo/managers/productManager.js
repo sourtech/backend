@@ -76,11 +76,7 @@ export default class ProductsManager {
         return productModel.findByIdAndDelete(id);
     };    
 
-    updateproduct = (id, product) => {
-        return productModel.findByIdAndUpdate(id, { $set: product });
-    };
-
-    downStock = (id, product) => {
+    updateProduct = (id, product) => {
         return productModel.findByIdAndUpdate(id, { $set: product });
     };
 

@@ -9,60 +9,66 @@ const createTicket = async (req, res) => {
     if(!cart){
         return res.sendErrorWithPayload('no existe cart');
     }
-    //hago un nuevo arreglo SIN Stock (va a ser el nuevo carrito del usuario)
-    const productosSinStock = cart.products.filter(producto => producto.quantity>producto._id.stock);
-    //Con stock (los que voy a descontar stock)
-    const productosConStock = cart.products.filter(producto => producto.quantity<=producto._id.stock);
-    //La suma de todos los productos que termina compando
 
-    await cartService.removeAll(idCart);
-
-    //De los que si tengo stock, los recorro para bajar el stock en productos
-    productosConStock.forEach( async (prod) => {
-        let newStock = {
-            stock: prod._id.stock-prod.quantity
-        }
-        await productService.downStock({ _id: prod._id._id }, newStock)  
-        
-        const nuevo = {
-            _id:prod._id._id, 
-            quantity:prod.quantity
-        };
-        const result = await cartService.addProduct({ _id: idCart }, nuevo);       
-    });
-
-    //al carrito del usuario ahora le dejo los que no pudo comprar
-
-
-    /*
-    productosSinStock.forEach( async (prod) => {
-        let nuevo = {
-            _id:prod._id._id, 
-            quantity:prod.quantity
-        };
-        console.log(nuevo)
-        await cartService.addProductNew(idCart, nuevo);
-    });
-*/
-/*
-    const amount = productosConStock.reduce((accumulator, current) => accumulator + current.quantity, 0)
-    //genero el ticket
-    const ticket = {
-        code: cryptoRandomString({length: 10}),
-        amount: amount,
-        purchaser: req.user.email
+    //proceso todo tema de stock
+    const {amount, amount_total} = await procesarStock(idCart,cart);
+    
+    const response = {
+        amount_total: amount_total,
+    };
+    //si realmente existio venta genero el ticket
+    if(amount>0){
+        let ticketCode = cryptoRandomString({length: 10});
+        const ticket = {
+            code: ticketCode,
+            amount: amount,
+            purchaser: req.user.email
+        }    
+        const newTicket  = await ticketService.createTicket(ticket);
+        //
+        if(newTicket){
+            response.amount=amount;
+            response.ticketCode=ticketCode;
+            //console.log('Ticket generado ' + ticketCode);
+        }        
     }
+    //console.log(response)
+    //devuelvo el payload con todo lo que paso
+    res.render("checkout", { 
+        status:"success", 
+        payload:response,
+        user: req.user,  
+        rest: amount_total - amount,
+        title:'Compra finalizada' 
+    })
 
-    const newTicket  = await ticketService.createTicket(ticket);
-*/
- console.log(newTicket)
- 
-
-
-    return res.status(200).send();
-    //return res.status(200).send({ products });
 }
 
+//procesar el stock y devuelve la cantidad de productos comprados, y total de productos
+//es una function interna no necesito exportarla
+const procesarStock = async (idCart, cart) => {
+    let amount = 0; 
+    let amount_total = 0;  
+    for (const prod of cart.products) {
+        //total de produtos
+        amount_total += prod.quantity;
+        if (prod.quantity <= prod._id.stock) {
+            console.log('Hay stock');
+            let prodID = prod._id._id.toString();
+            //elimino del carrito
+            let result = await cartService.removeProduct({ _id: idCart }, prodID);
+            if (result) {
+                console.log('Vendido');
+                amount += prod.quantity;
+                // Resto el stock al prodcuto
+                await productService.updateProduct(prodID,{stock: prod._id.stock-prod.quantity})
+            }
+        }
+    }  
+    //console.log('Total vendido: ' + amount);
+    //devuelvo la cantidad de productos que realmente termino comprando
+    return {amount, amount_total};
+}
 
 export default {
     createTicket
