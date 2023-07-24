@@ -37,3 +37,64 @@ Se aplicará un módulo de mocking y un manejador de errores a tu servidor actua
 }
 
 ```
+
+### POST /api/products
+
+**body producto completo**
+
+```
+{
+    "title":"Mandarina",
+    "description":"producto frutil22la",
+    "price": 78,
+    "thumbnail": [],
+    "code":"messand22a",
+    "stock":2,
+    "status": false,
+    "category": "Frutas"
+}
+```
+
+**response**
+
+```
+{
+    "result": {
+        "title": "Mandarina",
+        "description": "producto frutil22la",
+        "thumbnail": [],
+        "code": "messand22a",
+        "price": 78,
+        "stock": 2,
+        "status": false,
+        "category": "Frutas",
+        "_id": "64beb44c4d0fdb883b9623d6",
+        "created_at": "2023-07-24T17:26:36.245Z",
+        "updated_at": "2023-07-24T17:26:36.245Z",
+        "__v": 0
+    }
+}
+```
+
+**body con ERROR sin title**
+
+```
+{
+    "description":"producto frutil22la",
+    "price": 78,
+    "thumbnail": [],
+    "code":"messand22a",
+    "stock":2,
+    "status": false,
+    "category": "Frutas"
+}
+```
+
+**response**
+
+```
+{
+    "status": "error",
+    "error": "Error de creación de producto"
+}
+```

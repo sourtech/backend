@@ -93,7 +93,10 @@ export default class BaseRouter {
             try {
                 await callback.apply(this, params);
             } catch (error) {
-                params[1].status(500).send(error);
+                //console.log(params[1]);
+               // params[1].status(500).send(error);
+                console.log(error); // ahora para mostrar el log del servidor
+                params[1].status(error.status).send({status:"error",error:error.name})
             }
         })
     }
