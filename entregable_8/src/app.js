@@ -13,6 +13,7 @@ import socketRealTime from './listeners/socketRealTime.js';
 import registerChatHandler from './listeners/chat.js';
 import initializePassportStrategies from './config/passport.config.js';
 import config from './config/config.js';
+import errorHandler from './middlewares/error.js'
 
 const app = express();
 const PORT = config.port;
@@ -39,6 +40,8 @@ app.use('/api/carts', cartsRouter.getRouter());
 app.use("/api/sessions", sessionRouter.getRouter());
 //Vistas 
 app.use('/', viewsRouter.getRouter());
+//errores
+app.use(errorHandler)
 
 const server = app.listen(PORT, () => {
     try {

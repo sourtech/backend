@@ -1,4 +1,8 @@
 import { productService } from '../services/repositories/index.js';
+//control de errores
+import ErrorService from "../services/errors/CustomError.js";
+import { productErrorIncomplete } from "../services/errors/productErrors.js";
+import EErrors from "../services/errors/EErrors.js";
 
 const getProducts = async (req, res) => {
     //limit puede llegar como query string
@@ -35,19 +39,30 @@ const getProductId = async (req, res) => {
 }
 
 const setProduct = async (req, res) => {
-    try {
-        const product = req.body;
+    const product = req.body;
+    try{
+        //todos los campos son obligatorios, menos estatus default false
+        if (!product.title||!product.description||!product.thumbnail||!product.code||!product.price||!product.stock||!product.category) {
+            
+            //genero el error PARA EL SERVIDOR            
+            ErrorService.createError({
+                name:"Error de creación de producto",
+                cause: productErrorIncomplete(product),
+                message: 'Error intentando insertar un nuevo producto',
+                code: EErrors.INCOMPLETE_VALUES,
+                status:400
+            })
+            
+        }
         const result = await productService.addProduct(product);
-        console.log(product);
         if (result.status === 'error') {
             return res.status(400).send({ result });
         }
-
         return res.status(200).send({ result });
-    }
-    catch (err) {
-        console.log(err);
-    }    
+    }catch(error){
+        console.log(error)
+        return res.status(400).send(error);
+    }     
 }
 
 const updateProduct = async (req, res) => {

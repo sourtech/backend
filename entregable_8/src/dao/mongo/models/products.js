@@ -11,7 +11,10 @@ const schema = new mongoose.Schema(
         code: String,
         price: Number,
         stock: Number,
-        status: Boolean,
+        status: {
+            type: Boolean,
+            default: false
+        },
         category: String,
     },
     { 

@@ -10,7 +10,7 @@ const getProducts = async (req, res) => {
         for(let i=0;i<count;i++){
             products.push(generateProduct());
         }
-        res.send({status:"success",payload:products});
+        res.sendSuccessWithPayload(products);
     }
     catch (err) {
         console.log(err);
