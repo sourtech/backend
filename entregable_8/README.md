@@ -1,6 +1,6 @@
 ## 📁 Mocking y manejo de errores
 
-### Condigan
+### Consigna
 
 Se aplicará un módulo de mocking y un manejador de errores a tu servidor actua
 
@@ -37,5 +37,3 @@ Se aplicará un módulo de mocking y un manejador de errores a tu servidor actua
 }
 
 ```
-
--
