@@ -33,6 +33,66 @@
 			"response": []
 		},
 		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"naty@correo.com\",\r\n    \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/sessions/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sessions",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login ADMIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"adminCoder@coder.com\",\r\n    \"password\": \"adminCod3r123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/sessions/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sessions",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "getProductsByID",
 			"request": {
 				"method": "GET",
@@ -102,7 +162,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"title\":\"Mandarina\",\r\n    \"description\":\"producto frutil22la\",\r\n    \"price\": 78,\r\n    \"thumbnails\": [],\r\n    \"code\":\"messand22a\",\r\n    \"stock\":2,\r\n    \"status\": false,\r\n    \"category\": \"Frutas\"\r\n}",
+					"raw": "{\r\n    \"title\":\"Mandarina\",\r\n    \"description\":\"producto frutil22la\",\r\n    \"price\": 78,\r\n    \"thumbnail\": [],\r\n    \"code\":\"messand22a\",\r\n    \"stock\":2,\r\n    \"status\": false,\r\n    \"category\": \"Frutas\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -241,6 +301,61 @@
 						"api",
 						"products",
 						"70"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mock Productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/mockingproducts?limit=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mockingproducts"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"usuario\",\r\n    \"last_name\": \"apellido\",\r\n    \"email\": \"user@email.com\",\r\n    \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/sessions/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sessions",
+						"register"
 					]
 				}
 			},
