@@ -1,2 +1,48 @@
 fatal: Error Fatal
 error: Error Error
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Error de creación de producto","status":400}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Error de creación de producto","status":400}
+error: Uno o más parámetros obligatorios no fueron proporcionados:
+    Propiedades obligatorias:
+    * title: se esperaba una cadena definida, y se recibió undefined;
+    * description: se esperaba una cadena definida, y se recibió undefined;
+    * price: se esperaba Number, y se recibió undefined;
+    * thumbnail: se esperaba un array, y se recibió ;
+    * code: se esperaba una cadena definida, y se recibió messand22a;
+    * stock: se esperaba Number, y se recibió 2;
+    * status: se esperaba Boolean, y se recibió false;
+    * category: se esperaba una cadena definida, y se recibió Frutas;
+    
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Error de creación de producto","status":400}
+error: Uno o más parámetros obligatorios no fueron proporcionados:
+    Propiedades obligatorias:
+    * title: se esperaba una cadena definida, y se recibió undefined;
+    * description: se esperaba una cadena definida, y se recibió undefined;
+    * price: se esperaba Number, y se recibió undefined;
+    * thumbnail: se esperaba un array, y se recibió ;
+    * code: se esperaba una cadena definida, y se recibió messand22a;
+    * stock: se esperaba Number, y se recibió 2;
+    * status: se esperaba Boolean, y se recibió false;
+    * category: se esperaba una cadena definida, y se recibió Frutas;
+    
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"level":"error","message":"Uno o más parámetros obligatorios no fueron proporcionados:\n    Propiedades obligatorias:\n    * title: se esperaba una cadena definida, y se recibió undefined;\n    * description: se esperaba una cadena definida, y se recibió undefined;\n    * price: se esperaba Number, y se recibió undefined;\n    * thumbnail: se esperaba un array, y se recibió ;\n    * code: se esperaba una cadena definida, y se recibió messand22a;\n    * stock: se esperaba Number, y se recibió 2;\n    * status: se esperaba Boolean, y se recibió false;\n    * category: se esperaba una cadena definida, y se recibió Frutas;\n    "}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Error de creación de producto","status":400}
+error: Uno o más parámetros obligatorios no fueron proporcionados:
+    Propiedades obligatorias:
+    * title: se esperaba una cadena definida, y se recibió undefined;
+    * description: se esperaba una cadena definida, y se recibió undefined;
+    * price: se esperaba Number, y se recibió undefined;
+    * thumbnail: se esperaba un array, y se recibió ;
+    * code: se esperaba una cadena definida, y se recibió messand22a;
+    * stock: se esperaba Number, y se recibió 2;
+    * status: se esperaba Boolean, y se recibió false;
+    * category: se esperaba una cadena definida, y se recibió Frutas;
+    
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Error de creación de producto","status":400}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Error de creación de producto","status":400}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Error de creación de producto","status":400}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Error de creación de producto","status":400}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Error de creación de producto","status":400}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Error de creación de producto","status":400}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Error de creación de producto","status":400}
