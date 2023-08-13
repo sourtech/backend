@@ -1,0 +1,16 @@
+error: Cannot find module 'forgot'
+Require stack:
+- C:\Users\herna\OneDrive\Escritorio\nodejs\backend\complementario_3\node_modules\express\lib\view.js
+- C:\Users\herna\OneDrive\Escritorio\nodejs\backend\complementario_3\node_modules\express\lib\application.js
+- C:\Users\herna\OneDrive\Escritorio\nodejs\backend\complementario_3\node_modules\express\lib\express.js {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\herna\\OneDrive\\Escritorio\\nodejs\\backend\\complementario_3\\node_modules\\express\\lib\\view.js","C:\\Users\\herna\\OneDrive\\Escritorio\\nodejs\\backend\\complementario_3\\node_modules\\express\\lib\\application.js","C:\\Users\\herna\\OneDrive\\Escritorio\\nodejs\\backend\\complementario_3\\node_modules\\express\\lib\\express.js"]}
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: MailService is not defined
+error: ENOENT: no such file or directory, open 'C:\Users\herna\OneDrive\Escritorio\nodejs\backend\complementario_3\src\public\images\erp2.png' {"code":"ESTREAM","command":"API","errno":-4058,"path":"C:\\Users\\herna\\OneDrive\\Escritorio\\nodejs\\backend\\complementario_3\\src\\public\\images\\erp2.png","syscall":"open"}
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: jwt expired {"expiredAt":"2023-08-13T03:36:32.000Z","name":"TokenExpiredError"}
+error: jwt expired {"expiredAt":"2023-08-13T03:36:32.000Z","name":"TokenExpiredError"}
