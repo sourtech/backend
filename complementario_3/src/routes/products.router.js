@@ -6,9 +6,9 @@ export default class ProductsRouter extends BaseRouter {
     init() {
         this.get('/', ['AUTH'], passportCall('jwt', {strategyType: 'jwt'}), productsController.getProducts);
         this.get('/:pid', ['AUTH'], passportCall('jwt', {strategyType: 'jwt'}), productsController.getProductId)
-        this.post('/', ['ADMIN'], passportCall('jwt', {strategyType: 'jwt'}), productsController.setProduct)
-        this.put('/:pid', ['ADMIN'], passportCall('jwt', {strategyType: 'jwt'}), productsController.updateProduct)
-        this.delete('/:pid', ['ADMIN'], passportCall('jwt', {strategyType: 'jwt'}), productsController.deleteProduct)
+        this.post('/', ['ADMIN', 'PREMIUM'], passportCall('jwt', {strategyType: 'jwt'}), productsController.setProduct)
+        this.put('/:pid', ['ADMIN', 'PREMIUM'], passportCall('jwt', {strategyType: 'jwt'}), productsController.updateProduct)
+        this.delete('/:pid', ['ADMIN', 'PREMIUM'], passportCall('jwt', {strategyType: 'jwt'}), productsController.deleteProduct)
     }
 }
 

@@ -52,23 +52,38 @@ const setProduct = async (req, res) => {
         })
         //va a salir por el try catch del applyCallbacks router.js
     }
+    //Nueva funcion si es admin o un usuario premium
+    product.owner = req.user.role == "admin" ? "admin" : req.user.email;
     const result = await productService.addProduct(product);
-    if (result.status === 'error') {
-        return res.status(400).send({ result });
+    if (result.status === 'error'){
+        return res.sendErrorWithPayload({ result });
     }
-    res.status(200).send({ result });  
+    return res.sendSuccessWithPayload({ result })
 }
 
 const updateProduct = async (req, res) => {
     try {
         const pid = req.params.pid;
         const product = req.body;
-        const result = await productService.updateProduct(pid, product);
 
-        if (result.status === 'error'){
-            return res.status(400).send({ result });
+        //compruebo que id este bien formo
+        if (!pid.match(/^[0-9a-fA-F]{24}$/)) {
+            return res.sendBadRequest('El id no es correcto');
         }
-        return res.status(200).send({ result })
+        //Traigo el producto de la base
+        const productNow = await productService.getProductById({ _id: pid });
+        if(!productNow){
+            return res.sendBadRequest('El producto no existe');
+        }
+        //si el usuario es premium tengo que validar que el producto sea de el
+        if(req.user.role=='premium' && productNow.owner!=req.user.email){
+            return res.sendErrorWithPayload('No tienes permisos para borrar el producto')        
+        }
+        const result = await productService.updateProduct(pid, product);
+        if (result.status === 'error'){
+            return res.sendErrorWithPayload({ result });
+        }
+        return res.sendSuccessWithPayload({ result })
     }
     catch (err) {
         req.logger.error(err);
@@ -78,12 +93,25 @@ const updateProduct = async (req, res) => {
 const deleteProduct = async (req, res) => {
     try {
         const pid = req.params.pid;
-        const result = await productService.deleteProduct(Number(pid));
 
-        if (result.status === 'error'){
-            return res.status(400).send({ result });
+        //compruebo que id este bien formo
+        if (!pid.match(/^[0-9a-fA-F]{24}$/)) {
+            return res.sendBadRequest('El id no es correcto');
         }
-        return res.status(200).send({ result });
+        //Traigo el producto de la base
+        const productNow = await productService.getProductById({ _id: pid });
+        if(!productNow){
+            return res.sendBadRequest('El producto no existe');
+        }
+        //si el usuario es premium tengo que validar que el producto sea de el
+        if(req.user.role=='premium' && productNow.owner!=req.user.email){
+            return res.sendErrorWithPayload('No tienes permisos para borrar el producto')        
+        }
+        const result = await productService.deleteProduct(pid);
+        if (result.status === 'error'){
+            return res.sendErrorWithPayload({ result });
+        }
+        return res.sendSuccessWithPayload('Producto eliminado')
     } catch (err) {
         req.logger.error(err);
     }

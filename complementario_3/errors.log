@@ -14,3 +14,18 @@ error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HE
 error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
 error: jwt expired {"expiredAt":"2023-08-13T03:36:32.000Z","name":"TokenExpiredError"}
 error: jwt expired {"expiredAt":"2023-08-13T03:36:32.000Z","name":"TokenExpiredError"}
+error: Cast to ObjectId failed for value "64d982bd3aa06fad29daf6a0V" (type string) at path "_id" for model "products" {"kind":"ObjectId","path":"_id","reason":{},"stringValue":"\"64d982bd3aa06fad29daf6a0V\"","value":"64d982bd3aa06fad29daf6a0V","valueType":"string"}
+error: Cast to ObjectId failed for value "64d982bd3aa06fad29daf6a0V" (type string) at path "_id" for model "products" {"kind":"ObjectId","path":"_id","reason":{},"stringValue":"\"64d982bd3aa06fad29daf6a0V\"","value":"64d982bd3aa06fad29daf6a0V","valueType":"string"}
+error: Cast to ObjectId failed for value "64d982bd3aa06fad29daf6a0U" (type string) at path "_id" for model "products" {"kind":"ObjectId","path":"_id","reason":{},"stringValue":"\"64d982bd3aa06fad29daf6a0U\"","value":"64d982bd3aa06fad29daf6a0U","valueType":"string"}
+error: Cast to ObjectId failed for value "64d982bd3aa06fad29daf6a0U" (type string) at path "_id" for model "products" {"kind":"ObjectId","path":"_id","reason":{},"stringValue":"\"64d982bd3aa06fad29daf6a0U\"","value":"64d982bd3aa06fad29daf6a0U","valueType":"string"}
+error: Cast to ObjectId failed for value "64d982bd3aa06fad29daf6a" (type string) at path "_id" for model "products" {"kind":"ObjectId","path":"_id","reason":{},"stringValue":"\"64d982bd3aa06fad29daf6a\"","value":"64d982bd3aa06fad29daf6a","valueType":"string"}
+error: Cast to ObjectId failed for value "64d982bd3aa06fad29daf6a0I" (type string) at path "_id" for model "products" {"kind":"ObjectId","path":"_id","reason":{},"stringValue":"\"64d982bd3aa06fad29daf6a0I\"","value":"64d982bd3aa06fad29daf6a0I","valueType":"string"}
+error: Cast to ObjectId failed for value "64d982bd3aa06fad29daf6a0I" (type string) at path "_id" for model "products" {"kind":"ObjectId","path":"_id","reason":{},"stringValue":"\"64d982bd3aa06fad29daf6a0I\"","value":"64d982bd3aa06fad29daf6a0I","valueType":"string"}
+error: Cast to ObjectId failed for value "64d982bd3aa06fad29daf6a0I" (type string) at path "_id" for model "products" {"kind":"ObjectId","path":"_id","reason":{},"stringValue":"\"64d982bd3aa06fad29daf6a0I\"","value":"64d982bd3aa06fad29daf6a0I","valueType":"string"}
+error: Cast to ObjectId failed for value "64d982bd3aa06fad29daf6a0I" (type string) at path "_id" for model "products" {"kind":"ObjectId","path":"_id","reason":{},"stringValue":"\"64d982bd3aa06fad29daf6a0I\"","value":"64d982bd3aa06fad29daf6a0I","valueType":"string"}
+error: Parameter "filter" to findOne() must be an object, got "64d982bd3aa06fad29daf6a0I" (type string)
+error: Parameter "filter" to findOne() must be an object, got "64d982bd3aa06fad29daf6a0I" (type string)
+error: Parameter "filter" to findOne() must be an object, got "64d982bd3aa06fad29daf6a0" (type string)
+error: Cast to ObjectId failed for value "64d982bd3aa06fad29daf6a0p" (type string) at path "_id" for model "products" {"kind":"ObjectId","path":"_id","reason":{},"stringValue":"\"64d982bd3aa06fad29daf6a0p\"","value":"64d982bd3aa06fad29daf6a0p","valueType":"string"}
+error: Cast to ObjectId failed for value "64d982bd3aa06fad29daf6a0p" (type string) at path "_id" for model "products" {"kind":"ObjectId","path":"_id","reason":{},"stringValue":"\"64d982bd3aa06fad29daf6a0p\"","value":"64d982bd3aa06fad29daf6a0p","valueType":"string"}
+error: productService.deleteProduct is not a function

@@ -37,7 +37,6 @@ export default class BaseRouter {
     };
 
     handlePolicies = policies => {
-        //console.log(Array.isArray(policies, 'policies'));
         return (req, res, next) => {
             if (policies[0] === "PUBLIC"){
                 return next();
@@ -72,12 +71,14 @@ export default class BaseRouter {
                 return res.status(401).send({ status: "error", error: "Only user" });
             }  
             
-            if (policies[0] === "ADMIN" && user ){
-                if(user.role==='admin'){
+            if ((policies[0] === "ADMIN" || policies[1] === "PREMIUM") && user ){
+                if(user.role==='admin' || user.role==='premium'){
                     return next();
                 }
                 return res.status(401).send({ status: "error", error: "Only admin" });
-            }  
+            } 
+            
+            
 
             if (!user) return res.status(401).send({ status: "error", error: req.error });
           //  console.log(policies[0]);
