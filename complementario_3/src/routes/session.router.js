@@ -26,6 +26,7 @@ export default class SessionsRouter extends BaseRouter {
                 //aunque en realidad existe un error prefiero mostrar 404
                 res.status(404).render('error/404')
             } 
-		});		
+		});
+		this.post("/premium", ['AUTH'], passportCall('jwt', { strategyType: "jwt" }), sessionsController.setRol);
 	}
 }

@@ -65,7 +65,7 @@ export default class BaseRouter {
                 return next();
             } 
             if (policies[0] === "USER" && user ){
-                if(user.role==='usuario'){
+                if(user.role==='usuario' || user.role==='premium'){
                     return next();
                 }
                 return res.status(401).send({ status: "error", error: "Only user" });

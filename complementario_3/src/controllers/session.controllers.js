@@ -39,13 +39,18 @@ const setLogout = (req, res) => {
 
 const setForgot = async (req, res) => {
     const {email} = req.body;
-    if(!email) res.sendBadRequest("Debe ingresar un Email");
-    const user = await userService.getUsersBy({email});
-    if(!user) res.sendBadRequest("El Email no se encuentra registrado");
-    const restoreToken = generateToken(forgotDTO.getFrom(user), 30);//30 segundos dura 
-    const mailService = new MailService();
-    const result = await mailService.sendMail(email, Dtemplates.FORGOT,{restoreToken});
-    res.sendSuccess("Te hemos enviado un correo.");
+    try{
+        if(!email) return res.sendBadRequest("Debe ingresar un Email");
+        const user = await userService.getUsersBy({email});
+        if(!user) return res.sendBadRequest("El Email no se encuentra registrado");
+        const restoreToken = generateToken(forgotDTO.getFrom(user), 30);//30 segundos dura 
+        const mailService = new MailService();
+        const result = await mailService.sendMail(email, Dtemplates.FORGOT,{restoreToken});
+        if(result) return res.sendSuccess("Te hemos enviado un correo.");
+        return res.sendErrorWithPayload("Existe algun problema con el envio de correo, vuelve a intenta luego");
+    }catch(error){
+        req.logger.error(error);
+    }    
 }
 
 const setRecovery = async (req, res) => {
@@ -58,7 +63,7 @@ const setRecovery = async (req, res) => {
         if(isSamePass) return res.sendBadRequest("No puedes usar la misma contraseña");
         const newHashPass = await createHash(password);
         await userService.updateUsers(user._id, {password:newHashPass});
-        res.sendSuccess("Contraseña cambiada con exito! seras redireccionado en breve")
+        return res.sendSuccess("Contraseña cambiada con exito! seras redireccionado en breve")
     }catch(error){
         req.logger.error(err);
     }
@@ -84,11 +89,22 @@ const setGitHubCall = (req, res) => {
     }).redirect('/products/');
 }
 
+const setRol = async (req, res) => {
+    const {role} = req.body;
+    //solo permitimos estos dos roles
+    if(role==='usuario' || role==='premium'){
+        await userService.updateUsers(req.user.id, {role:role});
+        return res.sendSuccess("Rol actualizado con exito! seras redireccionado para que vuelvas a logearte")
+    }
+    res.sendBadRequest("Accion no permitida");
+}
+
 export default {
     setRegister,
     setLogin,
     setLogout,
     setForgot,
     setRecovery,
-    setGitHubCall
+    setGitHubCall,
+    setRol
 }

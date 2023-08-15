@@ -77,8 +77,10 @@ const updateProduct = async (req, res) => {
         }
         //si el usuario es premium tengo que validar que el producto sea de el
         if(req.user.role=='premium' && productNow.owner!=req.user.email){
-            return res.sendErrorWithPayload('No tienes permisos para borrar el producto')        
+            return res.sendErrorWithPayload('No tienes permisos para editar el producto')        
         }
+        //Nueva funcion si es admin o un usuario premium
+        product.owner = req.user.role == "admin" ? "admin" : req.user.email;        
         const result = await productService.updateProduct(pid, product);
         if (result.status === 'error'){
             return res.sendErrorWithPayload({ result });

@@ -29,3 +29,30 @@ error: Parameter "filter" to findOne() must be an object, got "64d982bd3aa06fad2
 error: Cast to ObjectId failed for value "64d982bd3aa06fad29daf6a0p" (type string) at path "_id" for model "products" {"kind":"ObjectId","path":"_id","reason":{},"stringValue":"\"64d982bd3aa06fad29daf6a0p\"","value":"64d982bd3aa06fad29daf6a0p","valueType":"string"}
 error: Cast to ObjectId failed for value "64d982bd3aa06fad29daf6a0p" (type string) at path "_id" for model "products" {"kind":"ObjectId","path":"_id","reason":{},"stringValue":"\"64d982bd3aa06fad29daf6a0p\"","value":"64d982bd3aa06fad29daf6a0p","valueType":"string"}
 error: productService.deleteProduct is not a function
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: Cannot read properties of null (reading 'email')
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: err is not defined
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: Cannot set headers after they are sent to the client {"code":"ERR_HTTP_HEADERS_SENT"}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Error de creación de producto","status":400}

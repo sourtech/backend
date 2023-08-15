@@ -1,24 +1,24 @@
-const form = document.getElementById("loginForm");
-const button = document.querySelector("button");
+const selectRol = document.getElementById('selectRol');
+const RoleActual = document.getElementById("role");
+const update = document.getElementById("update");
 
-form.addEventListener("submit", async (event) => {
+//dejo seleccionado el rol del usuario
+for (var i=0; i<selectRol.options.length; i++) {
+    let opt = selectRol.options[i];
+    if(opt.value === RoleActual.value)  opt.setAttribute('selected', true);
+}
+//actualizo el rol
+update.addEventListener("click", async (event) => {
     event.preventDefault();
-    //deshabilito boton
-    button.disabled = true;
-    const data = new FormData(form);
-    const obj = {};
-    data.forEach((value, key) => (obj[key] = value));
-
-    const response = await fetch("/api/sessions/forgot", {
+    const obj = {'role':selectRol.value};
+    const response = await fetch("/api/sessions/premium", {
         method: "POST",
         body: JSON.stringify(obj),
         headers: {
             "content-type": "application/json",
         },
-    });
-
+    });    
     const resposeData = await response.json();
-    //console.log(resposeData)
     if (resposeData.status === "success") {
         Swal.fire({
             toast: true,
@@ -26,9 +26,9 @@ form.addEventListener("submit", async (event) => {
             showConfirmButton: false,
             timer: 2500,
             title: resposeData.message,
-            icon: "info",
+            icon: "success",
         });
-        setTimeout(() => {  window.location.replace("/login"); }, 3000);
+        setTimeout(() => {  window.location.replace("/api/sessions/logout"); }, 3000);
     } else {
         Swal.fire({
             toast: true,
@@ -39,5 +39,4 @@ form.addEventListener("submit", async (event) => {
             icon: "error",
         });
     }
-    button.disabled = false;
-});
+}); 

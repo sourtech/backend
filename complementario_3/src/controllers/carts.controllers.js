@@ -1,4 +1,4 @@
-import { cartService } from '../services/repositories/index.js';
+import { cartService, productService } from '../services/repositories/index.js';
 
 const getCarts = async (req, res) => {
     try {
@@ -61,6 +61,14 @@ const setProductInCart = async (req, res) => {
 const setAddProduct = async (req, res) => {
     const productId = req.params.id;
 
+    //traigo el producto
+    const product = await productService.getProductById({ _id: productId });
+
+    //compruebo si es premium y el producto es de el
+    if(req.user.role==='premium' && product.owner===req.user.email){
+        return res.sendErrorWithPayload("No puede agregar productos que te pertenecen");
+    }
+    //todo en orden
     //EL ID del carrito ahora lo tiene el usuario
     const cid = req.user.cart; 
     console.log(cid);
@@ -70,6 +78,7 @@ const setAddProduct = async (req, res) => {
     };
     const result = await cartService.addProduct({ _id: cid }, nuevo);
     res.redirect('/cart');    
+
 }
 
 const removeAll = async (req, res) => {
