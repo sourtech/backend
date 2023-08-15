@@ -20,7 +20,7 @@ Con base en el proyecto que venimos desarrollando, toca solidificar algunos proc
 - Además, modificar la lógica de carrito para que un usuario premium NO pueda agregar a su carrito un producto que le pertenece
 - Implementar una nueva ruta en el router de api/users, la cual será /api/sessions/premium/:uid la cual permitirá cambiar el rol de un usuario, de “user” a “premium” y viceversa.
 
-### POST /api/sessions/premium
+### POST /api/sessions/premium ( o desde el profile del usuario)
 
 **body**
 
