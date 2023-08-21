@@ -1,31 +1,151 @@
+components:
+  securitySchemes:
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: authToken
+  requestBodies:
+    newProduct:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Titulo de producto
+        description:
+          type: string
+          description: Descripcion
+        code:
+          type: string
+          description: Código del producto
+        price:
+          type: number
+          description: Precio del producto
+        stock:
+          type: number
+          description: Cantidad de productos disponibles
+        category:
+          type: string
+          description: Categoria del producto
+      example:
+        title: nuevo producto
+        description: descripcion del producto
+        price: 70
+        thumbnail: []
+        code: codprod
+        stock: 20
+        status: true
+        category: Drama
+    updateProduct:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Titulo de producto
+        description:
+          type: string
+          description: Descripcion
+        code:
+          type: string
+          description: Código del producto
+        price:
+          type: number
+          description: Precio del producto
+        stock:
+          type: number
+          description: Cantidad de productos disponibles
+        category:
+          type: string
+          description: Categoria del producto
+      example:
+        title: nuevo titulo del producto
 paths:
   /api/products/:
     get:
       summary: Traer todos los productos
       tags:
         - Products
+      security:
+        - cookieAuth: []
       responses:
         "200":
-        description: "Los productos de obtuvieron correctamente"
+          description: "Los productos de obtuvieron correctamente"
+        "400":
+          description: "No estas autorizado"
     post:
       summary: Agregar nuevo producto
       tags:
         - Products
+      security:
+        - cookieAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/requestBodies/newProduct"
       responses:
         "200":
-        description: "Producto agregado correctamente"
+          description: "Producto agregado correctamente"
+        "400":
+          description: "No estas autorizado"
   /api/products/{pid}:
     get:
-      summary: Trar todos los productos
+      summary: Traer un producto por su ID
       tags:
         - Products
+      security:
+        - cookieAuth: []
       parameters:
         - name: pid
           in: path
           required: true
           description: Id del producto
           schema:
-            $type: String
+            type: string
       responses:
         "200":
-        description: "Los productos de obtuvieron correctamente"
+          description: "Los productos de obtuvieron correctamente"
+        "400":
+          description: "No estas autorizado"
+    put:
+      summary: Actualizar un producto
+      tags:
+        - Products
+      security:
+        - cookieAuth: []
+      parameters:
+        - name: pid
+          in: path
+          required: true
+          description: Id del producto
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/requestBodies/updateProduct"
+      responses:
+        "200":
+          description: "Producto actualizado correctamente"
+        "400":
+          description: "No estas autorizado, o algun parametro es incorrecto"
+    delete:
+      summary: Borrar un producto por su ID
+      tags:
+        - Products
+      security:
+        - cookieAuth: []
+      parameters:
+        - name: pid
+          in: path
+          required: true
+          description: Id del producto
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Producto eliminado correctamente"
+        "400":
+          description: "No estas autorizado, o algun parametro es incorrecto"
