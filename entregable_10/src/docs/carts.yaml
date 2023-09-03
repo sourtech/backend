@@ -1,0 +1,97 @@
+components:
+  securitySchemes:
+    cookieAuth: # arbitrary name for the security scheme; will be used in the "security" key later
+      type: apiKey
+      in: cookie
+      name: authToken # cookie name
+  requestBodies:
+    addProduct:
+      type: object
+      properties:
+        quantity:
+          type: number
+          description: Cantidad de productos a agregar al carrito
+      example:
+        quantity: 20
+paths:
+  /api/carts/:
+    get:
+      summary: Traer todos los carritos creados
+      tags:
+        - Carts
+      security:
+        - cookieAuth: []
+      responses:
+        "200":
+          description: "Listado correctamente"
+        "400":
+          description: "No estas autorizado"
+  /api/carts/{cid}:
+    get:
+      summary: Trae un carrito por el ID
+      tags:
+        - Carts
+      security:
+        - cookieAuth: []
+      parameters:
+        - name: cid
+          in: path
+          required: true
+          description: Id del carrito
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "El carrito se obtiene correctamente"
+        "400":
+          description: "No estas autorizado"
+  /api/carts/{cid}/product/{pid}:
+    post:
+      summary: Agregar un producto al carrito deseado
+      tags:
+        - Carts
+      security:
+        - cookieAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/requestBodies/addProduct"
+      parameters:
+        - name: cid
+          in: path
+          required: true
+          description: Id del carrito
+          schema:
+            type: string
+        - name: pid
+          in: path
+          required: true
+          description: Id del producto
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Producto agregado correctamente al carrito"
+        "400":
+          description: "No estas autorizado"
+  /api/carts/remove/{pid}:
+    get:
+      summary: Borra un producto del carrito
+      tags:
+        - Carts
+      security:
+        - cookieAuth: []
+      parameters:
+        - name: pid
+          in: path
+          required: true
+          description: ID del producto a borrar del carrito
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Producto borrado correctamente"
+        "400":
+          description: "No estas autorizado"
