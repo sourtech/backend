@@ -1,0 +1,43 @@
+error: userService.deleteOneUser is not a function
+error: userService.deleteOneUser is not a function
+error: userService.deleteOneUser is not a function
+error: userService.deleteOneUser is not a function
+error: userService.deleteOneUser is not a function
+error: user is not defined
+error: Cannot read properties of null (reading 'products')
+error: Cannot read properties of undefined (reading 'apply')
+error: Cannot read properties of undefined (reading 'apply')
+error: Cannot read properties of undefined (reading 'apply')
+error: Cannot read properties of undefined (reading 'apply')
+error: Cannot read properties of undefined (reading 'apply')
+error: options is not defined
+error: options is not defined
+error: options is not defined
+error: Cannot find module 'edit'
+Require stack:
+- C:\Users\herna\OneDrive\Escritorio\nodejs\backend\complementario_5\node_modules\express\lib\view.js
+- C:\Users\herna\OneDrive\Escritorio\nodejs\backend\complementario_5\node_modules\express\lib\application.js
+- C:\Users\herna\OneDrive\Escritorio\nodejs\backend\complementario_5\node_modules\express\lib\express.js {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\herna\\OneDrive\\Escritorio\\nodejs\\backend\\complementario_5\\node_modules\\express\\lib\\view.js","C:\\Users\\herna\\OneDrive\\Escritorio\\nodejs\\backend\\complementario_5\\node_modules\\express\\lib\\application.js","C:\\Users\\herna\\OneDrive\\Escritorio\\nodejs\\backend\\complementario_5\\node_modules\\express\\lib\\express.js"]}
+error: Cannot find module 'edit'
+Require stack:
+- C:\Users\herna\OneDrive\Escritorio\nodejs\backend\complementario_5\node_modules\express\lib\view.js
+- C:\Users\herna\OneDrive\Escritorio\nodejs\backend\complementario_5\node_modules\express\lib\application.js
+- C:\Users\herna\OneDrive\Escritorio\nodejs\backend\complementario_5\node_modules\express\lib\express.js {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\herna\\OneDrive\\Escritorio\\nodejs\\backend\\complementario_5\\node_modules\\express\\lib\\view.js","C:\\Users\\herna\\OneDrive\\Escritorio\\nodejs\\backend\\complementario_5\\node_modules\\express\\lib\\application.js","C:\\Users\\herna\\OneDrive\\Escritorio\\nodejs\\backend\\complementario_5\\node_modules\\express\\lib\\express.js"]}
+error: Cannot find module 'edit'
+Require stack:
+- C:\Users\herna\OneDrive\Escritorio\nodejs\backend\complementario_5\node_modules\express\lib\view.js
+- C:\Users\herna\OneDrive\Escritorio\nodejs\backend\complementario_5\node_modules\express\lib\application.js
+- C:\Users\herna\OneDrive\Escritorio\nodejs\backend\complementario_5\node_modules\express\lib\express.js {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\herna\\OneDrive\\Escritorio\\nodejs\\backend\\complementario_5\\node_modules\\express\\lib\\view.js","C:\\Users\\herna\\OneDrive\\Escritorio\\nodejs\\backend\\complementario_5\\node_modules\\express\\lib\\application.js","C:\\Users\\herna\\OneDrive\\Escritorio\\nodejs\\backend\\complementario_5\\node_modules\\express\\lib\\express.js"]}
+error: Cannot read properties of undefined (reading 'filename')
+error: Cannot read properties of undefined (reading 'filename')
+error: Cannot read properties of undefined (reading 'filename')
+error: Cannot read properties of undefined (reading 'filename')
+error: Cannot read properties of undefined (reading 'filename')
+error: Cannot read properties of undefined (reading 'filename')
+error: Cannot read properties of undefined (reading 'filename')
+error: Cannot read properties of undefined (reading 'filename')
+error: Cannot read properties of undefined (reading 'filename')
+error: Cannot read properties of undefined (reading 'filename')
+error: Cannot read properties of undefined (reading 'filename')
+error: Cannot read properties of null (reading 'products')
+error: Cannot read properties of null (reading 'products')
