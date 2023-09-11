@@ -41,3 +41,16 @@ error: Cannot read properties of undefined (reading 'filename')
 error: Cannot read properties of undefined (reading 'filename')
 error: Cannot read properties of null (reading 'products')
 error: Cannot read properties of null (reading 'products')
+error: product is not defined
+error: product is not defined
+error: param is not defined
+error: Parameter "filter" to findOne() must be an object, got "64fe13d13ea393d2dbd1921a" (type string)
+error: users is not defined
+error: Assignment to constant variable.
+error: Cannot read properties of undefined (reading 'length')
+error: Cannot read properties of undefined (reading 'length')
+error: Assignment to constant variable.
+error: Assignment to constant variable.
+error: result is not defined
+error: Cast to string failed for value "[ '1694396775596-ForrestGump1994Lat.webp' ]" (type Array) at path "image" {"kind":"string","path":"image","reason":null,"stringValue":"\"[ '1694396775596-ForrestGump1994Lat.webp' ]\"","value":["1694396775596-ForrestGump1994Lat.webp"],"valueType":"Array"}
+error: __dirname is not defined

@@ -30,10 +30,11 @@ export default class ViewsRouter extends BaseRouter {
 
              res.sendStatus(200);
          })
+         this.get("/documents", ['USER'], passportCall('jwt', {strategyType: 'jwt'}), viewsControllers.getDocument);
          //Administrador de productos
-         this.get("/admin/products", ['ADMIN'], passportCall('jwt', {strategyType: 'jwt'}), viewsControllers.adminProducts); 
-         this.get("/admin/products/edit/:pid", ['ADMIN'], passportCall('jwt', {strategyType: 'jwt'}), viewsControllers.adminProductsEdit); 
+         this.get("/admin/products", ['ADMIN', 'PREMIUM'], passportCall('jwt', {strategyType: 'jwt'}), viewsControllers.adminProducts); 
+         this.get("/admin/products/edit/:pid", ['ADMIN', 'PREMIUM'], passportCall('jwt', {strategyType: 'jwt'}), viewsControllers.adminProductsEdit); 
         //si no existe la pagina lo mando a 404
-        this.get("*", ['PUBLIC'], (req, res) => {res.status(404).render('error/404')})
+        this.get("*", ['PUBLIC'], (req, res) => {res.status(404).render('error/404',{user: req.user})})
     }
 }

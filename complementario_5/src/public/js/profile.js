@@ -1,6 +1,7 @@
 const selectRol = document.getElementById('selectRol');
 const RoleActual = document.getElementById("role");
 const update = document.getElementById("update");
+const perfil = document.getElementById("perfil");
 
 //dejo seleccionado el rol del usuario
 for (var i=0; i<selectRol.options.length; i++) {
@@ -10,13 +11,19 @@ for (var i=0; i<selectRol.options.length; i++) {
 //actualizo el rol
 update.addEventListener("click", async (event) => {
     event.preventDefault();
-    const obj = {'role':selectRol.value};
-    const response = await fetch("/api/sessions/premium", {
+    const formData = new FormData(); 
+    formData.append("role", selectRol.value);
+    formData.append("perfil", perfil.files[0]);
+    console.log(Array.from(formData))
+    const response = await fetch("/api/users/premium", {
         method: "POST",
+        body: formData,
+        /*
         body: JSON.stringify(obj),
         headers: {
             "content-type": "application/json",
         },
+        */
     });    
     const resposeData = await response.json();
     if (resposeData.status === "success") {

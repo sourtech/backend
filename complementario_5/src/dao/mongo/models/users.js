@@ -20,7 +20,16 @@ const schema = new mongoose.Schema(
 		cart:{
 			type:mongoose.SchemaTypes.ObjectId,
 			ref:'Carts'
-		}		
+		},
+		documents : [{
+				name : String,
+				reference : String
+			 }],
+		image: String,
+		last_connection: { 
+			type: Date, 
+			default: "" 
+		},
 	},
 	{ timestamps: { createdAt: "created_at", updatedAt: "updated_at" } }
 );

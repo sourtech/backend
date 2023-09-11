@@ -45,6 +45,7 @@ export const passportCall = (strategy,options={}) =>{
             if(user.role=='admin'){
                 user.superUser = true;
             }
+           // console.log(user)
             req.user = user;
             next();
         })(req,res,next);

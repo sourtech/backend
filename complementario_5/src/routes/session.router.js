@@ -30,7 +30,5 @@ export default class SessionsRouter extends BaseRouter {
 		});
 		//creo el end solo para testeo y me borre el usuario que genero
 		this.get("/test/drop", ['NO_AUTH'], sessionsController.deleteTest);
-
-		this.post("/premium", ['AUTH'], passportCall('jwt', { strategyType: "jwt" }), sessionsController.setRol);
 	}
 }

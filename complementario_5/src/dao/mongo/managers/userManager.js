@@ -24,4 +24,15 @@ export default class UserManager {
     deleteOneUser = (user) => {
         return userModel.findOneAndRemove(user);
     };
-}
+
+    lastConection =  (uid) => {
+        const param = {
+            last_connection: new Date(),
+        }
+        return userModel.findByIdAndUpdate(uid, { $set: param });
+    };
+
+    updateDocs = (uid, documents) => {
+        return userModel.findByIdAndUpdate(uid, { $set: documents });
+    }
+} 

@@ -72,8 +72,9 @@ const initializePassportStrategies = () => {
 				}
 				let user;
 				//Busco en base
-				console.log(email);
+				//console.log(email);
 				user = await manager.getUsersBy({ email });
+				//console.log(user)
 				if (!user){
 					return done(null, false, { message: 'Usuario no encontrado' });
 				}			
@@ -83,16 +84,11 @@ const initializePassportStrategies = () => {
 				if (!isValidPassword){
 					return done(null, false, { message: 'Contraseña inválida' });
 				}
-				/*
-				user = {
-					id: user._id,
-					name: `${user.first_name} ${user.last_name}`,
-					email: user.email,
-					role: user.role,
-					cart: user.cart,
-				};
-				*/
-				const nuser = new userDTO(user);				
+				//console.log(user)
+				const nuser = new userDTO(user);
+				//console.log(nuser);	
+				//actualizo fecha de cuando se logeo
+				await manager.lastConection( user._id );
 				return done(null, nuser);
 			}
 		)

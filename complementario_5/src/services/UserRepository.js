@@ -24,4 +24,12 @@ export default class UserRepository {
     deleteTest = (user) => {
         return this.dao.deleteOneUser(user)
     }
+
+    lastConection = (uid) => {
+        return this.dao.lastConection(uid)
+    }
+
+    updateDocs = (uid, documents) => {
+        return this.dao.updateDocs(uid, documents)
+    }
 }

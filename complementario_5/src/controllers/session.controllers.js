@@ -17,7 +17,8 @@ const setLogin = async (req, res) => {
         role: req.user.role,
         id: req.user.id,
         email: req.user.email,
-        cart: req.user.cart
+        cart: req.user.cart,
+        image: req.user.image
     }
     const access_token = generateToken(user)
 
@@ -89,16 +90,6 @@ const setGitHubCall = (req, res) => {
     }).redirect('/products/');
 }
 
-const setRol = async (req, res) => {
-    const {role} = req.body;
-    //solo permitimos estos dos roles
-    if(role==='usuario' || role==='premium'){
-        await userService.updateUsers(req.user.id, {role:role});
-        return res.sendSuccess("Rol actualizado con exito! seras redireccionado para que vuelvas a logearte")
-    }
-    res.sendBadRequest("Accion no permitida");
-}
-
 const deleteTest = async (req, res) => {
     await userService.deleteTest({email:'micorreo@correo.com'})
     return res.sendSuccess("Usuario de prueba eliminado")
@@ -111,6 +102,5 @@ export default {
     setForgot,
     setRecovery,
     setGitHubCall,
-    setRol,
     deleteTest
 }

@@ -1,11 +1,10 @@
 import jwt from 'jsonwebtoken';
 import config from '../config/config.js';
-import { productService, cartService } from "../services/repositories/index.js";
+import { productService, cartService, userService } from "../services/repositories/index.js";
 
 const getHome = async (req, res) => {
     try {  
         const { limit, page, sort, category, stock } = req.query   
-            
         const options = {
             page: Number(page) || 1,
             limit: Number(limit) || 12,//por default es 10
@@ -14,14 +13,13 @@ const getHome = async (req, res) => {
             sort: sort || '' //ordena por precio ? sort=1 o sort=-1
         };
         //console.log(options); 
-        
+        //console.log(req.user)
         // traigo todos los productos
         const products = await productService.getProducts(options, req, true);
         const status = products.docs.length>0 ? 'success' : 'error';
         res.render("index", { 
             status:status,
             user: req.user,
-            //admin: req.user.rol='admin' ? true : false, 
             payload:products, 
             title:'Home' 
         })
@@ -158,7 +156,20 @@ const getCart = async (req, res) => {
     })    
 }
 
+const getDocument = async  (req, res) => {
+   // const {pid} = req.params;
+   const user = await userService.getUsersBy({_id:req.user.id});
+   if(user){
+        res.render("user/document", { 
+            payload:user.documents,
+            user: req.user,  
+            title:'Documentos' 
+        }) 
+    }
+}
+
 export default {
+    getDocument,
     adminProducts,
     adminProductsEdit,
     getHome,

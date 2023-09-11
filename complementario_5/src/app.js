@@ -7,6 +7,7 @@ import swaggerUIExpress from 'swagger-ui-express';
 import ProductsRouter from './routes/products.router.js';
 import CartsRouter from './routes/carts.router.js';
 import SessionRouter from "./routes/session.router.js";
+import UsersRouter from "./routes/users.router.js";
 import ViewsRouter from './routes/views.router.js';
 
 import __dirname from './utils.js';
@@ -49,6 +50,7 @@ app.use('/apidocs',swaggerUIExpress.serve, swaggerUIExpress.setup(specs));
 initializePassportStrategies();
 
 const sessionRouter = new SessionRouter();
+const usersRouter = new UsersRouter();
 const productsRouter = new ProductsRouter();
 const cartsRouter = new CartsRouter();
 const viewsRouter = new ViewsRouter();
@@ -56,6 +58,7 @@ const viewsRouter = new ViewsRouter();
 app.use('/api/products', productsRouter.getRouter());
 app.use('/api/carts', cartsRouter.getRouter());
 app.use("/api/sessions", sessionRouter.getRouter());
+app.use("/api/users", usersRouter.getRouter());
 //Vistas
 app.use('/', viewsRouter.getRouter());
 //errores
