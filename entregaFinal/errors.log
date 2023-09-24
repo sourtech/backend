@@ -1,0 +1,154 @@
+error: userService.deleteOneUser is not a function
+error: userService.deleteOneUser is not a function
+error: userService.deleteOneUser is not a function
+error: userService.deleteOneUser is not a function
+error: userService.deleteOneUser is not a function
+error: user is not defined
+error: Cannot read properties of null (reading 'products')
+error: Cannot read properties of undefined (reading 'apply')
+error: Cannot read properties of undefined (reading 'apply')
+error: Cannot read properties of undefined (reading 'apply')
+error: Cannot read properties of undefined (reading 'apply')
+error: Cannot read properties of undefined (reading 'apply')
+error: options is not defined
+error: options is not defined
+error: options is not defined
+error: Cannot find module 'edit'
+Require stack:
+- C:\Users\herna\OneDrive\Escritorio\nodejs\backend\complementario_5\node_modules\express\lib\view.js
+- C:\Users\herna\OneDrive\Escritorio\nodejs\backend\complementario_5\node_modules\express\lib\application.js
+- C:\Users\herna\OneDrive\Escritorio\nodejs\backend\complementario_5\node_modules\express\lib\express.js {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\herna\\OneDrive\\Escritorio\\nodejs\\backend\\complementario_5\\node_modules\\express\\lib\\view.js","C:\\Users\\herna\\OneDrive\\Escritorio\\nodejs\\backend\\complementario_5\\node_modules\\express\\lib\\application.js","C:\\Users\\herna\\OneDrive\\Escritorio\\nodejs\\backend\\complementario_5\\node_modules\\express\\lib\\express.js"]}
+error: Cannot find module 'edit'
+Require stack:
+- C:\Users\herna\OneDrive\Escritorio\nodejs\backend\complementario_5\node_modules\express\lib\view.js
+- C:\Users\herna\OneDrive\Escritorio\nodejs\backend\complementario_5\node_modules\express\lib\application.js
+- C:\Users\herna\OneDrive\Escritorio\nodejs\backend\complementario_5\node_modules\express\lib\express.js {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\herna\\OneDrive\\Escritorio\\nodejs\\backend\\complementario_5\\node_modules\\express\\lib\\view.js","C:\\Users\\herna\\OneDrive\\Escritorio\\nodejs\\backend\\complementario_5\\node_modules\\express\\lib\\application.js","C:\\Users\\herna\\OneDrive\\Escritorio\\nodejs\\backend\\complementario_5\\node_modules\\express\\lib\\express.js"]}
+error: Cannot find module 'edit'
+Require stack:
+- C:\Users\herna\OneDrive\Escritorio\nodejs\backend\complementario_5\node_modules\express\lib\view.js
+- C:\Users\herna\OneDrive\Escritorio\nodejs\backend\complementario_5\node_modules\express\lib\application.js
+- C:\Users\herna\OneDrive\Escritorio\nodejs\backend\complementario_5\node_modules\express\lib\express.js {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\herna\\OneDrive\\Escritorio\\nodejs\\backend\\complementario_5\\node_modules\\express\\lib\\view.js","C:\\Users\\herna\\OneDrive\\Escritorio\\nodejs\\backend\\complementario_5\\node_modules\\express\\lib\\application.js","C:\\Users\\herna\\OneDrive\\Escritorio\\nodejs\\backend\\complementario_5\\node_modules\\express\\lib\\express.js"]}
+error: Cannot read properties of undefined (reading 'filename')
+error: Cannot read properties of undefined (reading 'filename')
+error: Cannot read properties of undefined (reading 'filename')
+error: Cannot read properties of undefined (reading 'filename')
+error: Cannot read properties of undefined (reading 'filename')
+error: Cannot read properties of undefined (reading 'filename')
+error: Cannot read properties of undefined (reading 'filename')
+error: Cannot read properties of undefined (reading 'filename')
+error: Cannot read properties of undefined (reading 'filename')
+error: Cannot read properties of undefined (reading 'filename')
+error: Cannot read properties of undefined (reading 'filename')
+error: Cannot read properties of null (reading 'products')
+error: Cannot read properties of null (reading 'products')
+error: product is not defined
+error: product is not defined
+error: param is not defined
+error: Parameter "filter" to findOne() must be an object, got "64fe13d13ea393d2dbd1921a" (type string)
+error: users is not defined
+error: Assignment to constant variable.
+error: Cannot read properties of undefined (reading 'length')
+error: Cannot read properties of undefined (reading 'length')
+error: Assignment to constant variable.
+error: Assignment to constant variable.
+error: result is not defined
+error: Cast to string failed for value "[ '1694396775596-ForrestGump1994Lat.webp' ]" (type Array) at path "image" {"kind":"string","path":"image","reason":null,"stringValue":"\"[ '1694396775596-ForrestGump1994Lat.webp' ]\"","value":["1694396775596-ForrestGump1994Lat.webp"],"valueType":"Array"}
+error: __dirname is not defined
+error: Cannot read properties of undefined (reading 'role')
+error: rew is not defined
+error: rew is not defined
+error: rew is not defined
+error: rew is not defined
+error: rew is not defined
+error: rew is not defined
+error: rew is not defined
+error: rew is not defined
+error: Cannot read properties of null (reading 'products')
+error: Cast to Boolean failed for value "" (type string) at path "status" because of "CastError" {"kind":"Boolean","path":"status","reason":{"kind":"boolean","message":"Cast to boolean failed for value \"\" (type string) at path \"undefined\"","name":"CastError","stringValue":"\"\"","value":"","valueType":"string"},"stringValue":"\"\"","value":"","valueType":"string"}
+error: Cast to Boolean failed for value "" (type string) at path "status" because of "CastError" {"kind":"Boolean","path":"status","reason":{"kind":"boolean","message":"Cast to boolean failed for value \"\" (type string) at path \"undefined\"","name":"CastError","stringValue":"\"\"","value":"","valueType":"string"},"stringValue":"\"\"","value":"","valueType":"string"}
+error: Cast to Boolean failed for value "" (type string) at path "status" because of "CastError" {"kind":"Boolean","path":"status","reason":{"kind":"boolean","message":"Cast to boolean failed for value \"\" (type string) at path \"undefined\"","name":"CastError","stringValue":"\"\"","value":"","valueType":"string"},"stringValue":"\"\"","value":"","valueType":"string"}
+error: Cast to Number failed for value "mm" (type string) at path "stock" {"kind":"Number","path":"stock","reason":{"actual":false,"code":"ERR_ASSERTION","expected":true,"generatedMessage":true,"operator":"=="},"stringValue":"\"mm\"","value":"mm","valueType":"string"}
+error: Cast to Number failed for value "NaN" (type number) at path "stock" {"kind":"Number","path":"stock","reason":{"actual":false,"code":"ERR_ASSERTION","expected":true,"generatedMessage":true,"operator":"=="},"stringValue":"\"NaN\"","value":null,"valueType":"number"}
+error: Cast to Number failed for value "NaN" (type number) at path "stock" {"kind":"Number","path":"stock","reason":{"actual":false,"code":"ERR_ASSERTION","expected":true,"generatedMessage":true,"operator":"=="},"stringValue":"\"NaN\"","value":null,"valueType":"number"}
+error: Cast to Number failed for value "mm" (type string) at path "stock" {"kind":"Number","path":"stock","reason":{"actual":false,"code":"ERR_ASSERTION","expected":true,"generatedMessage":true,"operator":"=="},"stringValue":"\"mm\"","value":"mm","valueType":"string"}
+error: Cast to Number failed for value "NaN" (type number) at path "stock" {"kind":"Number","path":"stock","reason":{"actual":false,"code":"ERR_ASSERTION","expected":true,"generatedMessage":true,"operator":"=="},"stringValue":"\"NaN\"","value":null,"valueType":"number"}
+error: Cast to Number failed for value "NaN" (type number) at path "stock" {"kind":"Number","path":"stock","reason":{"actual":false,"code":"ERR_ASSERTION","expected":true,"generatedMessage":true,"operator":"=="},"stringValue":"\"NaN\"","value":null,"valueType":"number"}
+error: title is not defined
+error: req is not defined
+error: req is not defined
+error: req is not defined
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Error de creación de producto","status":400}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Error de creación de producto","status":400}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Error de creación de producto","status":400}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Error de creación de producto","status":400}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Error de creación de producto","status":400}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Error de creación de producto","status":400}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Error de creación de producto","status":400}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Error de creación de producto","status":400}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Error de creación de producto","status":400}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Error de creación de producto","status":400}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Error de creación de producto","status":400}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Error de creación de producto","status":400}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Error de creación de producto","status":400}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Error de creación de producto","status":400}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Todos los campos son obligatorios","status":400}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Todos los campos son obligatorios","status":400}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Todos los campos son obligatorios","status":400}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Todos los campos son obligatorios","status":400}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Todos los campos son obligatorios","status":400}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Todos los campos son obligatorios","status":400}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Todos los campos son obligatorios","status":400}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Todos los campos son obligatorios","status":400}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Todos los campos son obligatorios","status":400}
+error: Cannot read properties of null (reading 'price')
+error: status is not defined
+error: products is not defined
+error: newUser is not defined
+error: newUser is not defined
+error: timeAgo is not defined
+error: Cannot read properties of undefined (reading 'constructor')
+error: Cannot read properties of null (reading 'price')
+error: Cannot read properties of null (reading '_id')
+error: Cannot read properties of null (reading 'price')
+error: del is not defined
+error: del is not defined
+error: Cannot read properties of null (reading 'price')
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Todos los campos son obligatorios","status":400}
+error: Cannot read properties of null (reading 'price')
+error: Cannot read properties of null (reading 'owner')
+error: products.find is not a function
+error: products.find is not a function
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Todos los campos son obligatorios","status":400}
+error: prod is not defined
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Todos los campos son obligatorios","status":400}
+error: productService.getProds is not a function
+error: productService.getProds is not a function
+error: productService.getProds is not a function
+error: Cannot read properties of null (reading 'products')
+error: pid is not defined
+error: this.dao.deleteUsers is not a function
+error: pid is not defined
+error: Cannot read properties of null (reading 'products')
+error: Cannot read properties of null (reading 'products')
+error: Cannot read properties of null (reading 'products')
+error: Cannot read properties of null (reading 'products')
+error: Cannot read properties of null (reading 'products')
+error: err is not defined
+error: Cannot read properties of undefined (reading 'apply')
+error: product is not defined
+error: Cast to ObjectId failed for value "650fb303c3640fa2577d1bf" (type string) at path "_id" for model "users" {"kind":"ObjectId","path":"_id","reason":{},"stringValue":"\"650fb303c3640fa2577d1bf\"","value":"650fb303c3640fa2577d1bf","valueType":"string"}
+error: Cast to ObjectId failed for value "646e69147880ccd722004f7" (type string) at path "_id" for model "products" {"kind":"ObjectId","path":"_id","reason":{},"stringValue":"\"646e69147880ccd722004f7\"","value":"646e69147880ccd722004f7","valueType":"string"}
+error: role is not defined
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Todos los campos son obligatorios","status":400}
+error: MailService is not defined
+error: ENOENT: no such file or directory, open 'C:\Users\herna\OneDrive\Escritorio\nodejs\backend\entregaFinal\src\templates\success.handlebars' {"code":"ENOENT","errno":-4058,"path":"C:\\Users\\herna\\OneDrive\\Escritorio\\nodejs\\backend\\entregaFinal\\src\\templates\\success.handlebars","syscall":"open"}
+error: Error intentando insertar un nuevo producto {"code":1,"name":"Todos los campos son obligatorios","status":400}
+error: No recipients defined {"code":"EENVELOPE","command":"API"}
+error: No recipients defined {"code":"EENVELOPE","command":"API"}
+error: No recipients defined {"code":"EENVELOPE","command":"API"}
+error: user is not defined
+error: a is not defined
+error: i is not defined
+error: nusers is not defined
+error: length is not defined
+error: u is not defined
