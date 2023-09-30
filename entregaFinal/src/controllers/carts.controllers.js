@@ -78,11 +78,11 @@ const setAddProduct = async (req, res) => {
     const product = await productService.getProductById({ _id: productId });
 
     if(!product){
-        return res.sendErrorWithPayload("El producto no existe");
+        return res.sendInternalError("El producto no existe");
     }
     //compruebo si es premium y el producto es de el
     if(req.user.role==='premium' && product.owner===req.user.email){
-        return res.sendErrorWithPayload("No puede agregar productos que te pertenecen");
+        return res.sendInternalError("No puede agregar productos que te pertenecen");
     }
     //todo en orden
     //EL ID del carrito ahora lo tiene el usuario
@@ -93,7 +93,10 @@ const setAddProduct = async (req, res) => {
         quantity:1
     };
     const result = await cartService.addProduct({ _id: cid }, nuevo);
-    res.redirect('/cart');    
+    //res.redirect('/cart');   
+    if(result){
+        res.sendSuccessWithPayload({message: 'Producto agregado a tu carrito', redirect: '/cart'});
+    } 
 
 }
 
@@ -118,11 +121,11 @@ const removeProduct = async (req, res) => {
 
     const result = await cartService.removeProduct({ _id: cid }, productId);
     if(result){
-        return res.redirect('/cart');
+        return res.sendSuccessWithPayload({message: 'Producto eliminado', redirect: '/cart'});
     }
     //si no existe el producto lo mando a home
     //a futuro pondre un aviso
-    res.redirect('/');
+    return res.sendInternalError("Error al eliminar");
 }
 
 
